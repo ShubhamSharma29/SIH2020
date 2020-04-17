@@ -7,7 +7,8 @@ COPY . /app
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN apt-get update
 RUN apt-get install -y git
-
+RUN pecl install mongodb
+RUN echo "extension=mongodb.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
 RUN composer install --no-interaction
 
 EXPOSE 80
