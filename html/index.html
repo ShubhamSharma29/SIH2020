@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A simple example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        width: 600px;
+        height: 400px;
+    }
+    #infobox{
+        width:600px;
+        height:500px;
+        left: 670px;
+        top:40px;
+        position: fixed;
+        background-color: #10b3ff;
+    }
+    #vanish {
+      margin-top: 30px;
+      right:300px;
+      top:20px;
+      border: 1px solid rgb(211, 23, 23); 
+      position:fixed;
+}
+    #transmk {
+      position:fixed;
+      margin-top: 47px;
+      top:100px;
+      border: 1px solid rgb(230, 21, 21); 
+      right:550px;
+    }
+
+    #desc{
+        position: fixed;
+    }
+    #trans{
+        margin-top: 70px;
+        position:fixed;
+    }
+
+    #cnf{
+        width:140px;
+        height:40px;
+        position: relative;
+        top: 50px;
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+
+<script>
+
+var ft =  {
+    "default": {
+        "firstScene": "vantage",
+        "sceneFadeDuration": 1000,
+        "autoLoad": true
+    },
+
+    "scenes":{
+    "vantage":{
+    "title":"vantage",
+    "type": "equirectangular",
+    "panorama": "img/img01.jpg",
+    "hotSpots": [
+                /* {
+                    "pitch": 60,
+                    "yaw": 60,
+                    "type": "info",
+                    "text": "Descriptive Marker"
+                }, */
+                {
+                    "pitch": 47,
+                    "yaw": -135,
+                    "type": "scene",
+                    "text": "Transitional Marker",
+                    "sceneId": "imgx"
+                }
+                ]
+
+        },
+    "imgx":{
+    "title":"imgx",
+    "type": "equirectangular",
+    "panorama": "img/beach.jpg",
+    }
+    
+
+    }
+}   
+
+var ki=  pannellum.viewer('panorama',ft);
+var mut=0;
+
+function toggle(){
+    
+    if(mut==0){
+        mut=1;
+    }
+    else{
+        mut=0;
+    }
+}
+
+ki.on('mouseup', function(event){
+    if(mut==1){
+    var bn =ki.mouseEventToCoords(event);
+    console.log(bn); 
+    pseudo(bn[0],bn[1]);
+    }
+});
+var status = "";
+function descreate() {
+    var bol = document.getElementById('vanish');
+    if(bol==null){
+       status = "desc";
+    var x = document.createElement('textarea');   
+    x.setAttribute("rows", "5");
+    x.setAttribute("cols", "25");
+    x.setAttribute("id","vanish");
+    document.getElementById("infobox").appendChild(x);
+    }
+    else{
+        status = "";
+        bol.remove();
+    }
+}   
+var rt=[];
+function transplace() {
+    var bol = document.getElementById('transmk');
+    if(bol==null){
+        status = "trans";
+    //document.getElementById('vanish').remove();
+    var x = document.createElement("select");
+    x.setAttribute("id","transmk");
+    var hk = ft.scenes;
+    
+    for(i in hk){
+        var s = i;
+            rt.push(i);
+            var t = document.createElement("option");
+            t.setAttribute("value",s);
+            t.innerText =s;
+            x.appendChild(t);
+    }
+    document.getElementById("infobox").appendChild(x);
+    }
+    else{
+        status="";
+        bol.remove();
+    }
+    
+}
+
+function pseudo(v1, v2){
+    
+    if(status==="desc"){   
+    var fg= document.getElementById("vanish").value;
+    ki.addHotSpot({"pitch":v1, "yaw":v2, "type":"info", text:fg}, ki.getScene());
+    }
+    
+    if(status==="trans"){
+            var e = document.getElementById("transmk");
+            var strUser = e.options[e.selectedIndex].value;
+            console.log(strUser);
+            ki.addHotSpot({"pitch":v1, "yaw":v2, "type":"scene", "sceneId":strUser}, ki.getScene());
+    }
+
+    
+    ki.loadScene("vantage");
+}
+
+function subconf(){
+    var sdata = ki.getConfig();
+    var jsonStr = JSON.stringify(sdata);
+    console.log(jsonStr);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST","receive.php");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(jsonStr);
+}
+
+</script>
+<input type  ="button" value = "sub" name = "transition" onclick="toggle()">
+<div id = "infobox">
+<input type  ="button" value = "Descriptive marker" name = "desc" id = "desc" onclick="descreate()" >
+<input type  ="button" value = "Transitional marker" name = "trans" id = "trans" onclick="transplace()" >
+</div>
+
+<input type = "button" value = "setConfig" name ="cnf" id ="cnf" onclick ="subconf()">
+
+</body>
+</html>
