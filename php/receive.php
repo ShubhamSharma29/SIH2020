@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 $contentType = explode(';', $_SERVER['CONTENT_TYPE']);
 $rp=  file_get_contents('php://input');
