@@ -1,6 +1,6 @@
 <?php
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 /* session_start(); */
 $id= $_GET['username'];
 $client = new MongoDB\Client( 'mongodb+srv://smartindia:<password>@cluster0-zlffx.gcp.mongodb.net/test?retryWrites=true&w=majority');

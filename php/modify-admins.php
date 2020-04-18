@@ -215,9 +215,9 @@ body {
                         <td> <strong><?php echo $res['email'];  ?> </strong></td>
                         <td> <strong><?php echo $res['DOB'];  ?> </strong></td>
                         <td> <strong><?php echo $res['password'];  ?> </strong></td>
-                        <td> <button class="btn-danger btn"> <a href="delete.php?id=<?php echo $res['id']; ?>" class="text-white"> Delete </a>  </button> </td>
-                        <td> <button class="btn-primary btn"> <a href="update.php?id=<?php echo $res['id']; ?>" class="text-white"> Update </a> </button> </td>
-                        </tr>
+                        <td> <button class="btn-danger btn"> <a href="delete.php?username=<?php echo $res['username']; ?>" class="text-white"> Delete </a>  </button> </td>
+                        <td> <button class="btn-primary btn"> <a href="change.php?username=<?php echo $res['username']; ?>" class="text-white"> Update </a> </button> </td>
+                      </tr>
 
                         <?php 
                         }

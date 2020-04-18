@@ -15,7 +15,7 @@
 // $conn->close();
    // connect to mongodb
 
-   require 'vendor/autoload.php';  
+   require '../vendor/autoload.php';  
    // Creating Connection  
    $con = new MongoDB\Client( 'mongodb+srv://smartindia:<password>@cluster0-zlffx.gcp.mongodb.net/test?retryWrites=true&w=majority');  
    $dbSelect = $con->companydb;
