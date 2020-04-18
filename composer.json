@@ -1,4 +1,7 @@
 {
+    "name":"SIH",
+    "description":"SIH requirements",
+
     "require": {
         "mongodb/mongodb": "^1.6"
     }
