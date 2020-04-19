@@ -23,7 +23,7 @@
   //       }
   //       mysqli_close($db);
   //  }
-  require '../vendor/autoload.php';
+  require 'vendor/autoload.php';
 /* session_start(); */
 
 $client = new MongoDB\Client;
