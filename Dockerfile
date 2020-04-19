@@ -8,7 +8,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN apt-get update
 RUN apt-get install -y git
 
-RUN apt-get install libssl-dev pkg-config
+RUN apt-get install -y libssl-dev pkg-config
 RUN pecl install mongodb \
     && docker-php-ext-enable mongodb
 RUN composer install --no-interaction
