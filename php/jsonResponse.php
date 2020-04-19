@@ -17,7 +17,7 @@
 
    require '../vendor/autoload.php';  
    // Creating Connection  
-   $con = new MongoDB\Client;  
+   $client = new MongoDB\Client('mongodb+srv://smartindia:smartindia@cluster0-zlffx.gcp.mongodb.net/test?retryWrites=true&w=majority');
    $dbSelect = $con->companydb;
    $scenes= $dbSelect->empColl->find();
    $result = Array();

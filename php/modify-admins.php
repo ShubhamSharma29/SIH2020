@@ -200,7 +200,7 @@ body {
                             require '../vendor/autoload.php';
                             
 
-                            $client = new MongoDB\Client;
+                            $client = new MongoDB\Client('mongodb+srv://smartindia:smartindia@cluster0-zlffx.gcp.mongodb.net/test?retryWrites=true&w=majority');
 
                             $user =$client->users; 
 
