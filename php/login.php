@@ -6,8 +6,7 @@ require 'vendor/autoload.php';
                             
 $tuname = $_POST["username"];
 $tpass = $_POST["password"];
-$client = new MongoDB\Client('mongodb+srv://smartindia:password@cluster0-zlffx.gcp.mongodb.net/test?retryWrites=true&w=majority');
-
+$client = new MongoDB\Client;
 $user =$client->users; 
 
 $ec = $user->admins;

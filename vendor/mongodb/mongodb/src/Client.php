@@ -15,7 +15,9 @@
  * limitations under the License.
  */
 
+
 namespace MongoDB;
+
 
 use MongoDB\Driver\ClientEncryption;
 use MongoDB\Driver\Exception\InvalidArgumentException as DriverInvalidArgumentException;
@@ -35,6 +37,7 @@ use MongoDB\Operation\DropDatabase;
 use MongoDB\Operation\ListDatabases;
 use MongoDB\Operation\Watch;
 use function is_array;
+
 
 class Client
 {
