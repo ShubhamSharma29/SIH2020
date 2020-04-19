@@ -2,7 +2,7 @@
 
 session_start();
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
                             
 $tuname = $_POST["username"];
 $tpass = $_POST["password"];
