@@ -26,7 +26,7 @@
   <body>
 		<div class="login">
 			<h1>Login</h1>
-			<form action="" method="GET">
+			<form action="login.php" method="POST">
 				<label for="username">
 					<i class="fas fa-user"></i>
 				</label>
@@ -35,26 +35,11 @@
 					<i class="fas fa-lock"></i>
 				</label>
 				<input type="password" name="password" placeholder="Password" id="password" required>
-				 <!-- <div id="hidee">
-                    <div style="margin-left: 100px">
-                        Enter the Captcha below<br />
-                    </div>
-
-                    <div style="text-align: center">
-                        <input type="text" id="mainCaptcha" />
-                        <input style="border-radius:20%" type="button" id="refresh" value="Refresh"
-                            onclick="Captcha();" />
-                    </div><br>
-
-                    <div style="margin-left: 44px">
-                        <input type="text" id="txtInput" />
-                    </div>
-				</div> -->
-				<input type="submit" value="Login" onclick="return redirect()">
+				<input type="submit" value="Login">
 			</form>
 		</div>
 
-		<script>
+		<!-- <script>
         function redirect() 
         {
             var x = document.getElementById("username");
@@ -71,6 +56,6 @@
                 return false;
             }
         }
-    </script>
+    </script> -->
 	</body>
 </html>
