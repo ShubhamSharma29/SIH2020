@@ -6,7 +6,7 @@ require '../vendor/autoload.php';
                             
 $tuname = $_POST["username"];
 $tpass = $_POST["password"];
-$client = new MongoDB\Client;
+$client = new MongoDB\Client('mongodb+srv://smartindia:smartindia@cluster0-zlffx.gcp.mongodb.net/test?retryWrites=true&w=majority');;
 $user =$client->users; 
 
 $ec = $user->admins;
@@ -16,7 +16,8 @@ if($dr ==1 ){
   header("location: super-dm.php");
 }
 else{
-echo $tpass;
+  echo '<script> alert("Wrong Credentials")</script>' . $tpass;
+  header("location: ../index.php");
 }
 // include("config.php");
 
