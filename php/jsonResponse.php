@@ -15,7 +15,7 @@
 // $conn->close();
    // connect to mongodb
 
-   require 'vendor/autoload.php';  
+   require '../vendor/autoload.php';  
    // Creating Connection  
    $con = new MongoDB\Client;  
    $dbSelect = $con->companydb;

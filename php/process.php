@@ -1,6 +1,6 @@
 <?php
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 session_start();
 $q = $_POST["Pname"];
 echo $q;

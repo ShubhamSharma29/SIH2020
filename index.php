@@ -2,7 +2,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+<<<<<<< HEAD
     <title>Login</title>
+=======
+    <title>Login page</title>
+>>>>>>> 4d9ac500dddfef9c24b6efc2bb51b185ada35e06
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="Stylesheet" href="./styles/styles.css">
     <style>
