@@ -32,17 +32,20 @@ $user =$client->users;
 
 $ec = $user->admins;
 
-if(isset($_POST["insert"])){
-  $name=$_POST["name"];
-  $username=$_POST["username"];
-  $phone=$_POST["phone"];
-  $email=$_POST["email"];
-  $DOB=$_POST["dob"];
-  $password=$_POST["password"];
-
-  $ec->insertOne(['name' => $name, "username" => $username , "phone" =>$phone, "email" => $email, "DOB" => $DOB,
-   "password" => $password]);
-
+if(isset($_POST["insert"]))
+{
+    $name=$_POST["name"];
+    $username=$_POST["username"];
+    $phone=$_POST["phone"];
+    $email=$_POST["email"];
+    $DOB=$_POST["dob"];
+    $password=$_POST["password"];
+    $cpassword=$_POST["cpassword"];
+    if($password==$cpassword)
+    {
+      $ec->insertOne(['name' => $name, "username" => $username , "phone" =>$phone, "email" => $email, "DOB" => $DOB,
+      "password" => $password]);
+    }
 }
 ?>
 
@@ -275,7 +278,7 @@ body {
                   </div>
                   <div class="form-group col-sm-6">
                       <label for="Password">Confirm Password</label>
-                      <input type="password" class="form-control" id="Password" placeholder="Password">
+                      <input type="password" class="form-control" name="cpassword" id="cpassword" placeholder="Confirm Password">
                     </div>
             </div>
               <div class="row">
