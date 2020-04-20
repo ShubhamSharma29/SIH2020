@@ -219,6 +219,11 @@ $query = $_SESSION['message'];
 		var qy = "<?php echo $query; ?>";
 		console.log(qy);
 		request.open("POST", "vd.php?q="+qy);
+    request.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    //nothing
+    }
+  };
 		request.send(fd); 
 	}
 

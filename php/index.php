@@ -186,7 +186,7 @@ body {
             <!-- sidebar-wrapper  -->
             <main class="page-content">
                 <div id = "newdiv">
-                    <form id = "createProject" action="blank2.php" method="POST" style="text-align:center;">
+                    <form id = "createProject" action="process.php" method="POST" style="text-align:center;">
                         <h1 class="serif">Place Name:</h1>&ensp;<input type ="text" placeholder="Enter name of the place to be added" name = "Pname" id = "Pname"><br><br>
                         <input type ="submit" value= "Submit" style="background:orange;color:black;" class="btn btn-primary btn-lg" ></button>
                     </form>    

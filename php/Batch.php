@@ -10,7 +10,7 @@
             for($i=0; $i<count($_FILES['file']['name']); $i++) 
             {
                 // set the array of allowed extensions
-                $allowed =  array('mp4', 'mkv');
+                $allowed =  array('mp4', 'mkv', 'm4v');
 
                 // extrach the file extension and check if it is valid
                 $ext = pathinfo($_FILES['file']['name'][$i], PATHINFO_EXTENSION);
@@ -26,7 +26,7 @@
                     $image_path = $path_parts['filename'].'_'.time().'.'.$path_parts['extension'];
 
                     //Setup our new file path
-                    $newFilePath = 'Projects/'.$target_dir.'/videos/'.$image_path;
+                    $newFilePath = '../Projects/'.$target_dir.'/videos/'.$image_path;
 
                     copy ( $_FILES['file']['tmp_name'][$i], 
                             $newFilePath);

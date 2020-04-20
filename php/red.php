@@ -1,5 +1,5 @@
 <?php
 
-header("Location:upld.php?q=ads");
+header("Location:upload.php?q=ads");
 
 ?>
