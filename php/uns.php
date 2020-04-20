@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 session_start();
 $contentType = explode(';', $_SERVER['CONTENT_TYPE']);
