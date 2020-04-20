@@ -8,8 +8,6 @@ $target = "../Projects/".$q."/";
 mkdir($target,0777,true);
 mkdir($target."/img",0777,true);
 mkdir($target."/videos",0777,true);
-//copy("Projects.xml", $target."id.xml");
 $_SESSION["message"] = $q;
 header("Location:upload.php");
-
 ?>
