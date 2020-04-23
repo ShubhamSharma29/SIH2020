@@ -16,13 +16,15 @@
         crossorigin="anonymous">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="../styles/dm2.css" rel="stylesheet">
     <link href="../styles/dm.css" rel="stylesheet">
     <script src="../scripts/dm.js"></script>
+    <script src="../scripts/dm2.js"></script>
  
 
 </head>
 <style> 
- h1 { font-family: "Copperplate Gothic Light"; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; }
+ h1 { color:black ; font-family: "Copperplate Gothic Light"; font-size: 60px; font-style: normal; font-variant: normal; font-weight: bold; line-height: 26.4px; }
 body {
   background-image: url("https://s27389.pcdn.co/wp-content/uploads/2018/04/AdobeStock_136701855-1024x683.jpeg");
   background-repeat: no-repeat;
@@ -30,6 +32,27 @@ body {
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
+}
+
+.cd-popup-trigger {
+  display: block;
+  width: 100px;
+  height:   40px;
+  line-height: 40px;
+  margin: 1em auto;
+  /* text-align: center; */
+  color: #FFF;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  border-radius: 1em;
+  background: #c82333;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.07);
+}
+@media only screen and (min-width: 1150px) {
+  .cd-popup-trigger {
+    margin: 0em auto;
+  }
 }
 </style>
 
@@ -51,7 +74,7 @@ body {
           <!-- <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" -->
         </div>
         <div class="user-info"><a href="super-dm.php">
-          <span class="user-name">6 Bits
+          <span class="user-name" style="color:blue">6 Bits
           </span><br>
           <span class="user-role">A VR Experience</span></a>
         </div>
@@ -209,16 +232,16 @@ body {
                            foreach($dr as $res){
                         ?>
                         <tr class="text-center">
-                        <td> <strong><?php echo $res['_id'];  ?> </strong></td>
-                        <td> <strong><?php echo $res['name'];  ?></strong> </td>
-                        <td> <strong><?php echo $res['username'];  ?> </strong></td>
-                        <td> <strong><?php echo $res['email'];  ?> </strong></td>
-                        <td> <strong><?php echo $res['DOB'];  ?> </strong></td>
-                        <td> <strong><?php echo $res['password'];  ?> </strong></td>
-                        <td> <button class="btn-danger btn"> <a href="delete.php?username=<?php echo $res['username']; ?>" class="text-white"> Delete </a>  </button> </td>
-                        <td> <button class="btn-primary btn"> <a href="change.php?username=<?php echo $res['username']; ?>" class="text-white"> Update </a> </button> </td>
+                        <td style="color:black ; font-weight:bold"> <strong><?php echo $res['_id'];  ?> </strong></td>
+                        <td  style="color:black ; font-weight:bold"> <strong><?php echo $res['name'];  ?></strong> </td>
+                        <td  style="color:black ; font-weight:bold"> <strong><?php echo $res['username'];  ?> </strong></td>
+                        <td  style="color:black ; font-weight:bold"> <strong><?php echo $res['email'];  ?> </strong></td>
+                        <td  style="color:black ; font-weight:bold"> <strong><?php echo $res['DOB'];  ?> </strong></td>
+                        <td  style="color:black ; font-weight:bold"> <strong><?php echo $res['password'];  ?> </strong></td>
+                        <td><a href="#" class="cd-popup-trigger"> Delete </a> </td>
+                        <td> <button class="btn-primary btn"> <a href="change.php?username=<?php echo $res['username']; ?>" class="text-white"> UPDATE </a> </button> </td>
                       </tr>
-
+                    
                         <?php 
                         }
                         ?>
@@ -232,9 +255,59 @@ body {
             </script>
         </div>
 
+        <div class="cd-popup" role="alert">
+          <div class="cd-popup-container">
+              <p>Are you sure you want to delete this data?</p>
+              <ul class="cd-buttons">
+                <li><a href="delete.php?username=<?php echo $res['username']; ?>">Yes</a></li>
+                <li><a href="modify-admins.php">No</a></li>
+              </ul>
+              <a href="#0" class="cd-popup-close img-replace">Close</a>
+          </div> <!-- cd-popup-container -->
+        </div> <!-- cd-popup -->
+        
+       
+<!-- 
+        <script>
+            pop= document.getElementsByClassName("cd-popup");
+            pop.style.display="none";
+        </script>
 
-        <!-- <div class="form-group col-md-12">
-        </div> -->
+        <script>
+          function test() 
+          {
+            var popup = document.getElementsByClassName("cd-popup");
+              for(var i=0; i<popup.length; i++) 
+              {
+                popup[i].classList.toggle('show');
+              }
+          }
+        </script> -->
+
+
+          <script>jQuery(document).ready(function($){
+            //open popup
+            $('.cd-popup-trigger').on('click', function(event){
+              event.preventDefault();
+              $('.cd-popup').addClass('is-visible');
+            });
+            
+            //close popup
+            $('.cd-popup').on('click', function(event){
+              if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup') ) {
+                event.preventDefault();
+                $(this).removeClass('is-visible');
+              }
+            });
+            //close popup when clicking the esc keyboard button
+            $(document).keyup(function(event){
+                if(event.which=='27'){
+                  $('.cd-popup').removeClass('is-visible');
+                }
+              });
+          });
+
+        </script>
       </div>
         <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">          

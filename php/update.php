@@ -21,16 +21,6 @@
     </head>
 
     <body>
-    
-     <!-- <div id = "newdiv">
-        <form id = "createProject" action="Entry.php" method="POST">
-            Search Name:&ensp;<input type ="text" name = "Pname" id = "Pname"><br><br>
-            <input type ="submit" value= "submit"></button>
-        </form>    
-        </div>
-
-        <div id = "resp">
-        </div> -->
         <div class="page-wrapper chiller-theme toggled">
   <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
     <i class="fas fa-bars"></i>
