@@ -108,19 +108,6 @@ body {
           <li class="sidebar-dropdown">
             <a href="#">
             <i class="far fa-user"></i>
-              <span>Profile</span>
-            </a>
-            <div class="sidebar-submenu">
-              <ul>
-                <li>
-                  <a href="#">Change password</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="sidebar-dropdown">
-            <a href="#">
-            <i class="far fa-user"></i>
               <span>User Management</span>
             </a>
             <div class="sidebar-submenu">
@@ -131,6 +118,9 @@ body {
                   <li>
                     <a href="modify-admins.php">Modify/Delete admins</a>
                   </li>
+                  <li>
+                  <a href="#">Change password</a>
+                </li>
               </ul>
             </div>
           </li>

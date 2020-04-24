@@ -72,6 +72,7 @@ if(isset($_POST["insert"]))
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link href="../styles/dm.css" rel="stylesheet">
+    <link href="../styles/dm3.css" rel="stylesheet">
     <script src="../scripts/dm.js"></script>
  
 
@@ -139,9 +140,7 @@ body {
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a href="../html/analytics-backup.html">Backup
-
-                  </a>
+                  <a href="../html/analytics-backup.html">Backup</a>
                 </li>
                 <li>
                   <a href="../html/analytics-report.html">Report</a>
@@ -172,22 +171,6 @@ body {
           <li class="sidebar-dropdown">
             <a href="#">
             <i class="far fa-user"></i>
-              <span>Profile</span>
-            </a>
-            <div class="sidebar-submenu">
-              <ul>
-                <li>
-                  <a href="#">Update profile</a>
-                </li>
-                <li>
-                  <a href="#">Change password</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="sidebar-dropdown">
-            <a href="#">
-            <i class="far fa-user"></i>
               <span>User Management</span>
             </a>
             <div class="sidebar-submenu">
@@ -198,6 +181,9 @@ body {
                   <li>
                     <a href="modify-admins.php">Modify/Delete admins</a>
                   </li>
+                  <li>
+                  <a href="#">Change password</a>
+                </li>
               </ul>
             </div>
           </li>
@@ -310,14 +296,26 @@ body {
     </div>
 
   </main>
-  <!-- page-content" -->
+          <div class="float-sm">
+            <div class="fl-fl float-fb">
+              <i class="fas fa-user"></i>
+              <a href="">View Profile</a>
+            </div>
+            <div class="fl-fl float-tw">
+              <i class="fas fa-database"></i>
+              <a href="../html/analytics-backup.html">Analytics Back-up</a>
+            </div>
+            <div class="fl-fl float-gp">
+              <i class="fas fa-file-alt"></i>
+              <a href="../html/analytics-report.html">Analytics Report</a>
+            </div>          
+            <div class="fl-fl float-pn">
+              <i class="fas fa-comments"></i>
+              <a href="">Feedback</a>
+            </div>
+          </div>
 </div>
-<!-- page-wrapper -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script> -->
+
     
 </body>
 

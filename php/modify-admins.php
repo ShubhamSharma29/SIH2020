@@ -18,6 +18,7 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link href="../styles/dm2.css" rel="stylesheet">
     <link href="../styles/dm.css" rel="stylesheet">
+    <link href="../styles/dm3.css" rel="stylesheet">
     <script src="../scripts/dm.js"></script>
     <script src="../scripts/dm2.js"></script>
  
@@ -139,22 +140,6 @@ body {
           <li class="sidebar-dropdown">
             <a href="#">
             <i class="far fa-user"></i>
-              <span>Profile</span>
-            </a>
-            <div class="sidebar-submenu">
-              <ul>
-                <li>
-                  <a href="#">Update profile</a>
-                </li>
-                <li>
-                  <a href="#">Change password</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="sidebar-dropdown">
-            <a href="#">
-            <i class="far fa-user"></i>
               <span>User Management</span>
             </a>
             <div class="sidebar-submenu">
@@ -165,6 +150,9 @@ body {
                   <li>
                     <a href="modify-admins.php">Modify/Delete admins</a>
                   </li>
+                  <li>
+                  <a href="#">Change password</a>
+                </li>
               </ul>
             </div>
           </li>
