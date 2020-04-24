@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
     <title>Super Admin</title>
+    
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -19,6 +20,7 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link href="../styles/dm.css" rel="stylesheet">
+    <link href="../styles/dm3.css" rel="stylesheet">
     <script src="../scripts/dm.js"></script>
     <script>
   function preventBack(){window.history.forward();}
@@ -86,25 +88,6 @@ body {
           </li>
           <li class="sidebar-dropdown">
             <a href="#">
-              <i class="fa fa-chart-line"></i>
-              <span>Analytics</span>
-              <!-- <span class="badge badge-pill badge-danger">3</span> -->
-            </a>
-            <div class="sidebar-submenu">
-              <ul>
-                <li>
-                  <a href="../html/analytics-backup.html">Backup
-
-                  </a>
-                </li>
-                <li>
-                  <a href="../html/analytics-report.html">Report</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="sidebar-dropdown">
-            <a href="#">
               <i class="far fa-gem"></i>
               <span>Scenes/Projects</span>
             </a>
@@ -114,7 +97,7 @@ body {
                   <a href="index.php">Add Place</a>
                 </li>
                 <li>
-                  <a href="update.php">Modify Scene</a>
+                  <a href="#">Modify Scene</a>
                 </li>
                 <li>
                   <a href="../html/scene-backup.html">Backup</a>
@@ -129,9 +112,6 @@ body {
             </a>
             <div class="sidebar-submenu">
               <ul>
-                <li>
-                  <a href="#">Update profile</a>
-                </li>
                 <li>
                   <a href="#">Change password</a>
                 </li>
@@ -153,12 +133,6 @@ body {
                   </li>
               </ul>
             </div>
-          </li>
-          <li class="sidebar-btn">
-            <a href="#">
-              <i class="fa fa-tachometer-alt"></i>
-              <span>Feedback</span>
-            </a>
           </li>
           <li class="sidebar-btn">
             <a href="blank.php">
@@ -186,20 +160,18 @@ body {
       <hr>
       <div class="row">
         <div class="form-group col-md-12">
+          <div class="col-xl-4 col-lg-6">
+            </div>
         </div>
         <div class="form-group col-md-12">
         </div>
       </div>
         <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">          
-          <!-- <div class="card rounded-0 p-0 shadow-sm">
-            <div class="card-body text-center"> -->
-            </div>
-          </div>          
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">         
+          </div>
+        </div>          
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">          
-          <!-- <div class="card rounded-0 p-0 shadow-sm">
-            <div class="card-body text-center"> -->
             </div>
           </div>          
         </div>
@@ -207,14 +179,26 @@ body {
     </div>
 
   </main>
-  <!-- page-content" -->
+          <div class="float-sm">
+            <div class="fl-fl float-fb">
+              <i class="fas fa-user"></i>
+              <a href="">View Profile</a>
+            </div>
+            <div class="fl-fl float-tw">
+              <i class="fas fa-database"></i>
+              <a href="../html/analytics-backup.html">Analytics Back-up</a>
+            </div>
+            <div class="fl-fl float-gp">
+              <i class="fas fa-file-alt"></i>
+              <a href="../html/analytics-report.html">Analytics Report</a>
+            </div>          
+            <div class="fl-fl float-pn">
+              <i class="fas fa-comments"></i>
+              <a href="">Feedback</a>
+            </div>
+          </div>
 </div>
-<!-- page-wrapper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+
     
 </body>
 
