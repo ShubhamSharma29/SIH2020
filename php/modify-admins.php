@@ -36,7 +36,7 @@ body {
 
 .cd-popup-trigger {
   display: block;
-  width: 100px;
+  width: 90px;
   height:   40px;
   line-height: 40px;
   margin: 1em auto;
@@ -239,7 +239,7 @@ body {
                         <td  style="color:black ; font-weight:bold"> <strong><?php echo $res['DOB'];  ?> </strong></td>
                         <td  style="color:black ; font-weight:bold"> <strong><?php echo $res['password'];  ?> </strong></td>
                         <td><a href="#" class="cd-popup-trigger"> Delete </a> </td>
-                        <td> <button class="btn-primary btn"> <a href="change.php?username=<?php echo $res['username']; ?>" class="text-white"> UPDATE </a> </button> </td>
+                        <td> <button class="btn-primary btn"> <a href="change.php?username=<?php echo $res['username']; ?>" class="text-white"> Update </a> </button> </td>
                       </tr>
                     
                         <?php 
