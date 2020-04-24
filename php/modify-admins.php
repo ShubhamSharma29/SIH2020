@@ -44,7 +44,7 @@ body {
   color: #FFF;
   font-size: 14px;
   font-size: 0.875rem;
-  font-weight: bold;
+  font-weight: 400;
   border-radius: 1em;
   background: #c82333;
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.07);
@@ -239,7 +239,7 @@ body {
                         <td  style="color:black ; font-weight:bold"> <strong><?php echo $res['DOB'];  ?> </strong></td>
                         <td  style="color:black ; font-weight:bold"> <strong><?php echo $res['password'];  ?> </strong></td>
                         <td><a href="#" class="cd-popup-trigger"> Delete </a> </td>
-                        <td> <button class="btn-primary btn"> <a href="change.php?username=<?php echo $res['username']; ?>" class="text-white"> Update </a> </button> </td>
+                        <td> <button class="btn-primary btn" style="font-weight:400"> <a href="change.php?username=<?php echo $res['username']; ?>" class="text-white"> Update </a> </button> </td>
                       </tr>
                     
                         <?php 
