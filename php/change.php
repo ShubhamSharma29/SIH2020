@@ -114,25 +114,6 @@ body {
           </li>
           <li class="sidebar-dropdown">
             <a href="#">
-              <i class="fa fa-chart-line"></i>
-              <span>Analytics</span>
-              <!-- <span class="badge badge-pill badge-danger">3</span> -->
-            </a>
-            <div class="sidebar-submenu">
-              <ul>
-                <li>
-                  <a href="../html/analytics-backup.html">Backup
-
-                  </a>
-                </li>
-                <li>
-                  <a href="../html/analytics-report.html">Report</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="sidebar-dropdown">
-            <a href="#">
               <i class="far fa-gem"></i>
               <span>Scenes/Projects</span>
             </a>
@@ -165,12 +146,6 @@ body {
                 </li>
               </ul>
             </div>
-          </li>
-          <li class="sidebar-btn">
-            <a href="#">
-              <i class="fa fa-tachometer-alt"></i>
-              <span>Feedback</span>
-            </a>
           </li>
           <li class="sidebar-btn">
             <a href="blank.php">

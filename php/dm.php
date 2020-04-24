@@ -81,12 +81,6 @@
             <li class="header-menu">
               <span>General</span>
             </li>
-            <li class="sidebar-btn">
-              <a href="#">
-                <i class="fa fa-globe"></i>
-                <span>Analytics</span>
-              </a>
-            </li>
             <li class="sidebar-dropdown">
               <a href="#">
                 <i class="far fa-gem"></i>
@@ -121,12 +115,6 @@
                   </li>
                 </ul>
               </div>
-            </li>
-            <li class="sidebar-btn">
-              <a href="#">
-                <i class="fa fa-tachometer-alt"></i>
-                <span>Feedback</span>
-              </a>
             </li>
             <li class="sidebar-btn">
               <a href="blank.php">
