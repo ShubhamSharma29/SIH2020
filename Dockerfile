@@ -1,8 +1,6 @@
-FROM php:7.2-cli
+FROM php:7.2-apache
 
-RUN mkdir -p app
-WORKDIR /app
-COPY . /app
+COPY . /var/www/html/
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN apt-get update
