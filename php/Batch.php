@@ -5,7 +5,7 @@
             $encoder = "";
             // setup an array to check errors at the time of file upload
             $errors = array();
-            $allFilesFromrequest = $_FILES['file']['name']
+            $allFilesFromrequest = $_FILES['file']['tmp_name']
             //Loop through each file
             for($i=0; $i<count($allFilesFromrequest); $i++) 
             {
