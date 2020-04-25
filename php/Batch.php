@@ -42,7 +42,7 @@
                 }
                 else
                 {
-                    print_r($errors);
+                    //print_r($errors);
                 }
             }
             if(empty($errors))
