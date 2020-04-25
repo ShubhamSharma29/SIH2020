@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    if(isset($_SESSION["flist"])){
+        $gr = $_SESSION["flist"];    
+    }
+
+    ?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -19,14 +28,7 @@
     
    
 
-    <?php
-    session_start();
-
-    if(isset($_SESSION["flist"])){
-        $gr = $_SESSION["flist"];    
-    }
-
-    ?>
+    
 
     <style>
 
