@@ -5,9 +5,9 @@
             $encoder = "";
             // setup an array to check errors at the time of file upload
             $errors = array();
-
+            $allFilesFromrequest = $_FILES['file']['name']
             //Loop through each file
-            for($i=0; $i<count($_FILES['file']['name']); $i++) 
+            for($i=0; $i<count(array_filter($allFilesFromrequest)); $i++) 
             {
                 // set the array of allowed extensions
                 $allowed =  array('mp4', 'mkv', 'm4v');
