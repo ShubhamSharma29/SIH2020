@@ -1,33 +1,29 @@
+<?php
+ error_reporting(E_ERROR | E_PARSE); 
+session_start();
+if(isset($_SESSION['message'])){
+$query = $_SESSION['message'];
+}
+$bbb = $_GET["q"];
+if($bbb=="ads"){
+  $_SESSION["ads"]="ads";
+}
+
+?>
 
 <html>
 <head>    
 <link rel="stylesheet" href="styles/bootstrap.min.css">
 <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
-    <title>Main page</title>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <link href="../styles/dm.css" rel="stylesheet">
-    <link href="../styles/dm3.css" rel="stylesheet">
-    <script src="../scripts/dm.js"></script>
- 
+    <link href="styles/dm.css" rel="stylesheet">
+
 
 </head>
-
 <body>
-<?php
-session_start();
-if(isset($_SESSION['message'])){
-$query = $_SESSION['message'];
-}
-
-
-?>
 
 <div class="page-wrapper chiller-theme toggled">
   <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
@@ -45,9 +41,9 @@ $query = $_SESSION['message'];
         <div class="user-pic">
           <!-- <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" -->
         </div>
-        <div class="user-info"><a href="super-dm.php">
+        <div class="user-info"><a href="../php/super-dm.php">
           <span class="user-name">6 Bits
-          </span><br>
+          </span>
           <span class="user-role">A VR Experience</span></a>
         </div>
       </div>
@@ -72,20 +68,80 @@ $query = $_SESSION['message'];
           </li>
           <li class="sidebar-dropdown">
             <a href="#">
+              <i class="fa fa-tachometer-alt"></i>
+              <span>Feedback</span>
+            </a>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-chart-line"></i>
+              <span>Analytics</span>
+              <!-- <span class="badge badge-pill badge-danger">3</span> -->
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="../html/analytics-backup.html">Backup
+
+                  </a>
+                </li>
+                <li>
+                  <a href="../html/analytics-report.html">Report</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
               <i class="far fa-gem"></i>
               <span>Scenes/Projects</span>
             </a>
             <div class="sidebar-submenu">
               <ul>
                 <li>
-                  <a href="index.php">Add Place</a>
+                  <a href="../html/add_project.html">Add Project</a>
                 </li>
                 <li>
-                  <a href="#">Modify Scene</a>
+                  <a href="Homepage.html">Add Scene</a>
+                </li>
+                <li>
+                  <a href="update.php">Modify Scene</a>
                 </li>
                 <li>
                   <a href="../html/scene-backup.html">Backup</a>
                 </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+            <i class="far fa-user"></i>
+              <span>Profile</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Update profile</a>
+                </li>
+                <li>
+                  <a href="#">Change password</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+            <i class="far fa-user"></i>
+              <span>User Management</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                    <a href="add-user.php">Add admin</a>
+                  </li>
+                  <li>
+                    <a href="modify-admins.php">Modify/Delete admins</a>
+                  </li>
               </ul>
             </div>
           </li>
@@ -100,81 +156,45 @@ $query = $_SESSION['message'];
         <br><br><br>
         <li class="header-menu">
             <span>Contact us:<br>
-               At Vit University <br>
-                Bhopal - 02026554875</span>
-        </li>
+                Mr. Ruturaj Sahu<br>
+                9876327832</span>
+          </li>
       </div>
       <!-- sidebar-menu  -->
     </div>
   </nav>
   <!-- sidebar-wrapper  -->
   <main class="page-content">
-    <div class="container-fluid">
-      <h2>6 Bits</h2>
-      <hr>
-      <div class="row">
-        <div class="form-group col-md-12">
-            <div class="container" style="margin-top: 200px;">
-                <div class="offset-md-4 col-md-4">
-                    <form method="POST" enctype="multipart/form-data" action="Batch.php" id = "capt">
-                        <div class="form-group">
-                            <label>Select video</label>
-                            <input type="file" id="file" name="file[]" accept="video/*" class="form-control" multiple="multiple" required>
-                        </div>
-
-                        <input type="submit" class="btn btn-primary" value="Generate">
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="form-group col-md-12">
-        </div>
-      </div>
-        <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">          
-          <!-- <div class="card rounded-0 p-0 shadow-sm">
-            <div class="card-body text-center"> -->
-            </div>
-          </div>          
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">          
-          <!-- <div class="card rounded-0 p-0 shadow-sm">
-            <div class="card-body text-center"> -->
-            </div>
-          </div>          
-        </div>
-      </div>
-    </div>
+   
+<div class="container" style="margin-top: 200px;" >
+	<div class="offset-md-4 col-md-4" style="position:fixed;left:20px;">
+		<form method="POST" enctype="multipart/form-data" action="Batch.php" id = "capt">
+			<div class="form-group">
+				<label>Select video</label>
+				<input type="file" id="file" name="file[]" accept="video/*" class="form-control" multiple="multiple" required>
+			</div>
+      <input type="button" class="btn btn-primary" value="Generate" onclick="deploy();"><br><br>
+			<input type="submit" class="btn btn-success" value="Submit">
+    </form>
+    
+    
+	</div>
+</div>
+<div id ="aspx">
+</div>
 
   </main>
-  <div class="float-sm">
-            <div class="fl-fl float-fb">
-              <i class="fas fa-user"></i>
-              <a href="">View Profile</a>
-            </div>
-            <div class="fl-fl float-tw">
-              <i class="fas fa-database"></i>
-              <a href="../html/analytics-backup.html">Analytics Back-up</a>
-            </div>
-            <div class="fl-fl float-gp">
-              <i class="fas fa-file-alt"></i>
-              <a href="../html/analytics-report.html">Analytics Report</a>
-            </div>          
-            <div class="fl-fl float-pn">
-              <i class="fas fa-comments"></i>
-              <a href="">Feedback</a>
-            </div>
-          </div>
+  <!-- page-content" -->
 </div>
 
 
-
-
-<script type = "text/javascript">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
 	var fileInput = document.getElementById('file');
 	var fileList=[];
 
 	fileInput.addEventListener('change', function(event){
+    
 		fileList=[];
 		for(var i=0;i<fileInput.files.length;i++){
 			fileList.push(fileInput.files[i]);
@@ -182,34 +202,113 @@ $query = $_SESSION['message'];
 	});
 
 	sendFile = function(file){
+    
 		var fd = new FormData();
 		var request = new XMLHttpRequest();
 		fd.set('file', file);
 		var qy = "<?php echo $query; ?>";
-		console.log(qy);
-		request.open("POST", "vd.php?q="+qy);
+		//console.log(qy);
+    request.open("POST", "vd.php?q="+qy);
     request.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     //nothing
     }
   };
+		
 		request.send(fd); 
 	}
 
+
+  function capture(){
+    for(var i=0;i<fid;i++){
+
+    var canvas = document.getElementById('canvas');
+    var video = document.getElementById('video'+i);
+    console.log(video.videoWidth + " " + video.videoHeight);
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    canvas.getContext('2d').clearRect(0,0, canvas.width, canvas.height);
+    canvas.getContext('2d').drawImage(video, 0,0, video.videoWidth, video.videoHeight);
+    var dataURL = canvas.toDataURL();
+    var fileName = fileList[i].name;
+    var head = fileName.split(".");
+
+    $.ajax({
+  type: "POST",
+  url: "save.php",
+  data: { 
+     imgBase64: dataURL,
+     fname:head[0]
+  }
+}).done(function(o) {
+  console.log('saved'); 
+  // If you want the file to be visible in the browser 
+  // - please modify the callback in javascript. All you
+  // need is to return the url to the file, you just saved 
+  // and than put the image in your browser.
+});
+
+    }
+    
+}
+  var fid=0;
 	var fc = document.getElementById("capt");
 	fc.addEventListener('submit', function(event){
-		//event.preventDefault();
-		fileList.forEach(function(file){
-			
-			sendFile(file);
+    //event.preventDefault();
+		capture();
+
+  });
+
+    function deploy(){
+   	fileList.forEach(function(file){
+      var dc = document.getElementById("canvas");
+      if(dc!=null){
+        dc.remove();
+      }
+      var canv = document.createElement("canvas");
+			var vid =document.createElement("video");
+      vid.setAttribute("id", "video"+fid);
+      vid.setAttribute("src", file.name);
+      vid.setAttribute("type", "video/mp4");
+      vid.setAttribute("controls", "true");
+      vid.setAttribute("style", "height:340px; width: 250px;");
+      if(fid==0){
+      vid.style.marginTop="-340px";
+      vid.style.marginLeft="750px";
+      
+      }
+      else{
+        vid.style.marginTop=-fid*20 + "px";
+      vid.style.marginLeft="750px";
+      }
+      document.getElementById("aspx").appendChild(vid);
+      var video = document.getElementById('video'+fid);
+      /* console.log(video.videoWidth + " " + video.videoHeight);
+      canv.width = 1180;
+      canv.height = 520; */
+      canv.setAttribute("style", "border:1px solid #000000;display:none;height:640;width:1280;margin-left:50px; margin-top:-400px;");
+      canv.setAttribute("id", "canvas");
+      document.body.appendChild(canv);
+      fid+=1;
+
+			//sendFile(file);
 			//upldFile(file);
 		});
 		
-
-	});
+    }
+	
 
 
 	</script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="scripts/dm.js"></script>
+
+
 </body>
 
 </html>
