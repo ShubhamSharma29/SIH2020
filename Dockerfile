@@ -11,10 +11,7 @@ RUN apt install -y ffmpeg
 
 RUN apt-get install -y libssl-dev pkg-config
 RUN pecl install mongodb \
-    && docker-php-ext-enable mongodb \
-    && a2enmod headers
-    && sed -ri -e 's/^([ \t]*)(<\/VirtualHost>)/\1\tHeader set Access-Control-Allow-Origin "*"\n\1\2/g' /etc/apache2/sites-available/*.conf
-
+    && docker-php-ext-enable mongodb
 RUN composer install --no-interaction
 
 EXPOSE 80
