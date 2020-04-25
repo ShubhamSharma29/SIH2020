@@ -49,9 +49,4 @@
             {
                 //$_SESSION["flist"] = $encoder;
                 header("Location:add-place.php");
-            }
-        
-        
-     
-
-    ?>
+            }?>
