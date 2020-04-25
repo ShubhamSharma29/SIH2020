@@ -19,6 +19,7 @@
         crossorigin="anonymous">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="../styles/dm.css" rel="stylesheet">
     <link href="../styles/dm3.css" rel="stylesheet">
     <link href="../styles/dm4.css" rel="stylesheet">

@@ -19,17 +19,12 @@ if($bbb=="ads"){
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-<<<<<<< HEAD
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="../styles/dm4.css" rel="stylesheet">
     <link href="../styles/dm.css" rel="stylesheet">
     <link href="../styles/dm3.css" rel="stylesheet">
     <script src="../scripts/dm.js"></script>
- 
-=======
-    <link href="styles/dm.css" rel="stylesheet">
->>>>>>> 7e6f6fc24737894ac351ba61ce4c684b0c646fe4
-
 
 </head>
 <body>
@@ -193,7 +188,6 @@ if($bbb=="ads"){
 </div>
 
   </main>
-<<<<<<< HEAD
   
   <div class="float-sm">
             <div class="fl-fl float-fb">
@@ -279,10 +273,8 @@ if($bbb=="ads"){
 
 
             </script>
-          
-=======
-  <!-- page-content" -->
->>>>>>> 7e6f6fc24737894ac351ba61ce4c684b0c646fe4
+
+
 </div>
 
 
