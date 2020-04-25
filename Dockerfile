@@ -13,7 +13,7 @@ RUN apt-get install -y libssl-dev pkg-config
 RUN pecl install mongodb \
     && docker-php-ext-enable mongodb
 RUN a2enmod headers
-RUN sed -ri -e 's/^([ \t]*)(<\/VirtualHost>)/\1\tHeader set Access-Control-Allow-Origin "*"\n\1\2/g' /etc/apache2/sites-available/*.conf
+RUN sed -ri -e 's/^([ \t]*)(<\/VirtualHost>)/\1\tHeader set Access-Control-Allow-Origin "sih.mailid.tk"\n\1\2/g' /etc/apache2/sites-available/*.conf
 
 RUN composer install --no-interaction
 
