@@ -1,0 +1,189 @@
+h3
+{
+  /* text-align:left; */
+  margin-left:-1000px;
+  margin-right:140px;
+  padding:10px;
+}
+
+.modal,
+.modal-box {
+  z-index: 900;
+}
+
+.modal-sandbox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+.modal-box {
+  position: relative;
+  width: 80%;
+  max-width: 720px;
+  margin: 100px auto;
+  animation-name: modalbox;
+  animation-duration: .4s;
+  animation-timing-function: cubic-bezier(0,0,.3,1.6);
+}
+
+.modal-header {
+  padding: 10px 100px;
+  background: #0d9691;
+  color: #ffffff;
+}
+
+.modal-body {
+  background: #ECEFF1;
+  padding: 60px 40x;
+}
+
+.text-right{
+  margin-top:-75px;
+  margin-bottom: 80px;
+}
+
+.close-modal {
+  text-align: right;
+  cursor: pointer;
+  margin-left:550px;
+  padding: 20px 40px;
+  background: transparent;
+  color: black;
+  text-decoration: none;
+}
+
+@-webkit-keyframes modalbox {
+  0% {
+    top: -250px; 
+    left: -500px;
+    opacity: 0;
+  }
+  100% {
+    top: 0; 
+    opacity: 1;
+  }
+}
+
+@keyframes modalbox {
+  0% {
+    top: -250px; 
+    left: -500px;
+    opacity: 0;
+  }
+  100% {
+    top: 0; 
+    opacity: 1;
+  }
+}
+
+.modal-trigger {
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: ease .2s;
+}
+
+button {
+  border: 1px solid #333333;
+  outline: none;
+  color: #333333;
+}
+
+
+[type="date"] {
+  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+
+.buttonDownload {
+	display: inline-block;
+	position: relative;
+	padding: 10px 25px;
+  margin:0 0 0 150px;
+	background-color: #11bfb6;
+	color: white;
+  
+	/* font-family: sans-serif; */
+	text-decoration: none;
+	font-size: 0.9em;
+	text-align: center;
+	text-indent: 15px;
+}
+
+.buttonDownload:hover {
+	background-color: #137c5b;
+	color: white;
+}
+
+.buttonDownload:before, .buttonDownload:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 15px;
+	top: 52%;
+}
+
+.buttonDownload:before {
+	width: 10px;
+	height: 2px;
+	border-style: solid;
+	border-width: 0 2px 2px;
+}
+
+
+.buttonDownload:after {
+	width: 0;
+	height: 0;
+	margin-left: 1.55px;
+	margin-top: -7px;
+  
+	border-style: solid;
+	border-width: 4px 4px 0 4px;
+	border-color: transparent;
+	border-top-color: inherit;
+	
+	animation: downloadArrow 2s linear infinite;
+	animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+	border-color: #4CC713;
+}
+
+.buttonDownload:hover:after {
+	border-top-color: #4CC713;
+	animation-play-state: running;
+}
+
+@keyframes downloadArrow {
+	
+	0% {
+		margin-top: -7px;
+		opacity: 1;
+	}
+	
+	0.001% {
+		margin-top: -15px;
+		opacity: 0;
+	}
+	
+	50% {
+		opacity: 1;
+	}
+	
+	100% {
+		margin-top: 0;
+		opacity: 0;
+	}
+}

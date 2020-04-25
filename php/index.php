@@ -12,6 +12,8 @@
         crossorigin="anonymous">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="../styles/dm4.css" rel="stylesheet">
     <link href="../styles/dm.css" rel="stylesheet">
     <script src="../scripts/dm.js"></script>
  
@@ -192,23 +194,7 @@ body {
                     </form>    
                 </div>
             </main>
-            <!-- page-content" -->
           </div>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-         crossorigin="anonymous"></script>
-        <script src="scripts/dm.js"></script>
-
-
-        <!-- <div id = "newdiv">
-        <form id = "createProject" action="Process.php" method="POST">
-            Project Name:&ensp;<input type ="text" name = "Pname" id = "Pname"><br><br>
-            <input type ="submit" value= "submit"></button>
-        </form>    
-    </div> -->
-
     </body>
 
 
