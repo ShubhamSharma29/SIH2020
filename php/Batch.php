@@ -56,7 +56,7 @@
                     
                 }
                 else{
-                header("Location:index.php");
+                header("Location:add-place.php");
                 }
             }
         
