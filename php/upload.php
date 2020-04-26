@@ -173,7 +173,7 @@ if($bbb=="ads"){
    
 <div class="container" style="margin-top: 200px;" >
 	<div class="offset-md-4 col-md-4" style="position:fixed;left:20px;">
-		<form method="POST" enctype="multipart/form-data" action="Batch.php" id = "capt">
+		<form method="POST" enctype="multipart/form-data" action="redirect.php" id = "capt">
 			<div class="form-group">
 				<label>Select video</label>
 				<input type="file" id="file" name="file[]" accept="video/*" class="form-control" multiple="multiple" required>
@@ -297,7 +297,7 @@ if($bbb=="ads"){
 		var fd = new FormData();
 		var request = new XMLHttpRequest();
 		fd.set('file', file);
-		var qy = "<?php echo $query; ?>";
+		
 		//console.log(qy);
     request.open("POST", "Batch.php?");
     request.onreadystatechange = function() {
@@ -315,7 +315,7 @@ if($bbb=="ads"){
 
     var canvas = document.getElementById('canvas');
     var video = document.getElementById('video'+i);
-    console.log(video.videoWidth + " " + video.videoHeight);
+    //console.log(video.videoWidth + " " + video.videoHeight);
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     canvas.getContext('2d').clearRect(0,0, canvas.width, canvas.height);
@@ -346,16 +346,22 @@ if($bbb=="ads"){
 	fc.addEventListener('submit', function(event){
     //event.preventDefault();
 		capture();
-
+    
   });
 
 
     function deploy(){
    	fileList.forEach(function(file){
+
+			sendFile(file);
+			//upldFile(file);
+
+            
       var dc = document.getElementById("canvas");
       if(dc!=null){
         dc.remove();
       }
+      var qy = "<?php echo $query; ?>";
       var canv = document.createElement("canvas");
 			var vid =document.createElement("video");
       vid.setAttribute("id", "video"+fid);
@@ -379,11 +385,14 @@ if($bbb=="ads"){
       canv.setAttribute("id", "canvas");
       document.body.appendChild(canv);
       fid+=1;
+      
 
-			//sendFile(file);
-			//upldFile(file);
 		});
 		
+    
+
+
+
     }
 	
 
