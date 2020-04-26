@@ -1,3 +1,7 @@
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,16 +17,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-        <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'> 
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link href="../styles/dm4.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="../styles/dm.css" rel="stylesheet">
-    <script src="../scripts/dm.js"></script>
     <link href="../styles/dm3.css" rel="stylesheet">
+    <link href="../styles/dm4.css" rel="stylesheet">
+    <script src="../scripts/dm.js"></script>
     <script>
   function preventBack(){window.history.forward();}
   setTimeout("preventBack()", 1);
@@ -33,88 +34,22 @@
 
 <style>
   h1 { font-family: "Copperplate Gothic Light"; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; }
-/* body {
+body {
   background-image: url("https://s27389.pcdn.co/wp-content/uploads/2018/04/AdobeStock_136701855-1024x683.jpeg");
   background-repeat: no-repeat;
   background-color: #cccccc;
   background-size: cover;
   background-position: center;
-} */
-
-
-@import url(//fonts.googleapis.com/css?family=Oswald:400);
-* {
-  margin: 0;
-  padding: 0;
+  /* background-blend-mode: overlay; */
 }
-
-.chart {
-  position: absolute;
-  width:400px;
-  height: 400px;
-  top: 52%;
-  left: 80%;
-  margin: -225px 0 0 -225px;
-}
-.pieTip {
-  position: absolute;
-  float: left;
-  min-width: 30px;
-  max-width: 300px;
-  padding: 5px 18px 6px;
-  border-radius: 2px;
-  background: rgba(255,255,255,.97);
-  color: #444;
-  font-size: 19px;
-  text-shadow: 0 1px 0 #fff;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1.3;
-  letter-spacing: .06em;
-  box-shadow: 0 0 3px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.5);
-  -webkit-transform: all .3s;
-     -moz-transform: all .3s;
-      -ms-transform: all .3s;
-       -o-transform: all .3s;
-          transform: all .3s;
-  pointer-events: none;
-}
-.pieTip:after {
-      position: absolute;
-      left: 50%;
-      bottom: -6px;
-      content: "";
-      height: 0;
-      margin: 0 0 0 -6px;
-      border-right: 5px solid transparent;
-      border-left: 5px solid transparent;
-      border-top: 6px solid rgba(255,255,255,.95);
-      line-height: 0;
-}
-.chart path { cursor: pointer; }
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 100%;
-  height:70%;
-  margin-top:-5px;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.container {
-  padding: 2px 16px;
-}
-
-
 </style>
-<body  style="background-color:#cfd1d3" class="page-wrapper chiller-theme toggled">
+<body>
+<script>
+
+</script>
 <div class="page-wrapper chiller-theme toggled">
   <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
-    <i class="fa fa-bars"></i>
+    <i class="fas fa-bars"></i>
   </a>
   <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
@@ -210,33 +145,34 @@
     </div>
   </nav>
   <!-- sidebar-wrapper  -->
-  <main style="background-color:#6C6AE4" class="page-content">
-      <div class="container-fluid">
-        <h1>6  Bits</h1>
-        <pre><h6>A VR Experience</h6></pre>       
-            <div class="row">
+  <main class="page-content">
+    <div class="container-fluid">
+      <h1>6  Bits</h1>
+      <pre><h6>   A VR Experience</h6></pre>
+      <hr>
+      <div class="row">
+        <div class="form-group col-md-12">
+          <div class="col-xl-4 col-lg-6">
             </div>
-      </div>          
-    </main>
-
-      <div class="card">
-        <div class="container">
-          <div id="chartContainer" style="height: 400px; width:400px; justify-content:center; margin:0 auto; position:relative ; 
-              margin-left:200px ">
-            </div>
-
-
-            <div id="pieChart" class="chart" >
-              <span style="font-size:15px ; background-color:cornsilk"><strong>Analytics of selected places
-                <br> in Andaman & Nicobar</strong></span>
-            </div>   
+        </div>
+        <div class="form-group col-md-12">
         </div>
       </div>
-   
-      
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">         
+          </div>
+        </div>          
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">          
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+
+  </main>
           
- 
-      <div class="float-sm">
+  <div class="float-sm">
             <div class="fl-fl float-fb">
               <i class="fas fa-user"></i>
               <a href="">View Profile</a>
@@ -321,8 +257,8 @@
 
             </script>
           
-     
-  </div>    
+</div>
+
     
 </body>
 

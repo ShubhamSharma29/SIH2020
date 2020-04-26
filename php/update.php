@@ -98,7 +98,7 @@
                     <a href="modify-admins.php">Modify/Delete admins</a>
                   </li>
                   <li>
-                  <a href="change-pass.php">Change password</a>
+                  <a href="#">Change password</a>
                 </li>
               </ul>
             </div>

@@ -17,13 +17,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">  
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'> 
   
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  
   <link href="../styles/dm4.css" rel="stylesheet">
     <link href="../styles/dm.css" rel="stylesheet">
     <script src="../scripts/dm.js"></script>
@@ -31,74 +29,21 @@
 </head>
 
 <style>
-  h1 { font-family: "Copperplate Gothic Light"; color:"#fff" ;font-size: 60px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; }
-  /* body {
+  h1 { font-family: "Copperplate Gothic Light"; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; }
+  body {
   background-image: url("https://s27389.pcdn.co/wp-content/uploads/2018/04/AdobeStock_136701855-1024x683.jpeg");
   background-repeat: no-repeat;
   background-color: #cccccc;
   background-size: cover;
   background-position: center;
-  background-blend-mode: overlay; 
-}*/
-
-
-@import url(//fonts.googleapis.com/css?family=Oswald:400);
-* {
-  margin: 0;
-  padding: 0;
+  background-blend-mode: overlay;
 }
-
-.chart {
-  position: absolute;
-  width:400px;
-  height: 400px;
-  top: 63%;
-  left: 78%;
-  margin: -225px 0 0 -225px;
-}
-.pieTip {
-  position: absolute;
-  float: left;
-  min-width: 30px;
-  max-width: 300px;
-  padding: 5px 18px 6px;
-  border-radius: 2px;
-  background: rgba(255,255,255,.97);
-  color: #444;
-  font-size: 19px;
-  text-shadow: 0 1px 0 #fff;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1.3;
-  letter-spacing: .06em;
-  box-shadow: 0 0 3px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.5);
-  -webkit-transform: all .3s;
-     -moz-transform: all .3s;
-      -ms-transform: all .3s;
-       -o-transform: all .3s;
-          transform: all .3s;
-  pointer-events: none;
-}
-.pieTip:after {
-      position: absolute;
-      left: 50%;
-      bottom: -6px;
-      content: "";
-      height: 0;
-      margin: 0 0 0 -6px;
-      border-right: 5px solid transparent;
-      border-left: 5px solid transparent;
-      border-top: 6px solid rgba(255,255,255,.95);
-      line-height: 0;
-}
-.chart path { cursor: pointer; }
-
 </style>
 
 <body>
-  <div style="background-color:#cfd1d3" class="page-wrapper chiller-theme toggled">
+  <div class="page-wrapper chiller-theme toggled">
     <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
-      <i class="fa fa-bars"></i>
+      <i class="fas fa-bars"></i>
     </a>
     <nav id="sidebar" class="sidebar-wrapper">
       <div class="sidebar-content"> 
@@ -168,7 +113,7 @@
                     <a href="#">Update profile</a>
                   </li>
                   <li>
-                    <a href="change-pass.php">Change password</a>
+                    <a href="#">Change password</a>
                   </li>
                 </ul>
               </div>
@@ -192,26 +137,18 @@
       </div>
     </nav>
     <!-- sidebar-wrapper  -->
-    <main style="background-color:#6C6AE4" class="page-content">
+    <main class="page-content">
       <div class="container-fluid">
         <h1>6  Bits</h1>
-        <pre><h6>A VR Experience</h6></pre>       
+        <pre><h6>A VR Experience</h6></pre>
+        <hr>        
             <div class="row">
             </div>
       </div>          
     </main>
 
-        <div id="chartContainer" style="height: 450px; width: 35%; justify-content:center; margin:0 auto; position:relative ; 
-          margin-left:300px ; margin-top:-5px">
-        </div>
-
-      <div id="pieChart" class="chart" >
-        <span style="font-size:15px ; background-color:cornsilk"><strong>Analytics of selected places
-          <br> in Andaman & Nicobar</strong></span>
-      </div>   
     
-
-
+         
     <div class="float-sm">
             <div class="fl-fl float-fb">
               <i class="fas fa-user"></i>
