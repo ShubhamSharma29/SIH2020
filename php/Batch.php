@@ -26,7 +26,7 @@
                     $image_path = $path_parts['filename'].'.'.$path_parts['extension'];
 
                     //Setup our new file path
-                    $newFilePath = 'Projects/'.$target_dir.'/videos/'.$image_path;
+                    $newFilePath = '../Projects/'.$target_dir.'/videos/'.$image_path;
 
                     copy ( $_FILES['file']['tmp_name'][$i], 
                             $newFilePath);
