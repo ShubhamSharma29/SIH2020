@@ -52,8 +52,8 @@
   position: absolute;
   width:400px;
   height: 400px;
-  top: 63%;
-  left: 78%;
+  top: 52%;
+  left: 80%;
   margin: -225px 0 0 -225px;
 }
 .pieTip {
@@ -92,6 +92,24 @@
       line-height: 0;
 }
 .chart path { cursor: pointer; }
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  height:70%;
+  margin-top:-5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+
 </style>
 <body  style="background-color:#cfd1d3" class="page-wrapper chiller-theme toggled">
 <div class="page-wrapper chiller-theme toggled">
@@ -201,15 +219,21 @@
       </div>          
     </main>
 
-    
-    <div id="chartContainer" style="height: 450px; width: 35%; justify-content:center; margin:0 auto; position:relative ; 
-          margin-left:300px ; margin-top:-5px">
-        </div>
+      <div class="card">
+        <div class="container">
+          <div id="chartContainer" style="height: 400px; width:400px; justify-content:center; margin:0 auto; position:relative ; 
+              margin-left:200px ">
+            </div>
 
-      <div id="pieChart" class="chart" >
-        <span style="font-size:15px ; background-color:cornsilk"><strong>Analytics of selected places
-          <br> in Andaman & Nicobar</strong></span>
-      </div>   
+
+            <div id="pieChart" class="chart" >
+              <span style="font-size:15px ; background-color:cornsilk"><strong>Analytics of selected places
+                <br> in Andaman & Nicobar</strong></span>
+            </div>   
+        </div>
+      </div>
+   
+      
           
  
       <div class="float-sm">
