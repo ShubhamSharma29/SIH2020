@@ -15,6 +15,7 @@ if($bbb=="ads"){
 <head>    
 <link rel="stylesheet" href="styles/bootstrap.min.css">
 <meta charset="utf-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
@@ -278,7 +279,7 @@ if($bbb=="ads"){
 </div>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script>
 	var fileInput = document.getElementById('file');
 	var fileList=[];
@@ -298,7 +299,7 @@ if($bbb=="ads"){
 		fd.set('file', file);
 		var qy = "<?php echo $query; ?>";
 		//console.log(qy);
-    request.open("POST", "vd.php?q="+qy);
+    request.open("POST", "Batch.php?");
     request.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     //nothing
@@ -323,6 +324,7 @@ if($bbb=="ads"){
     var fileName = fileList[i].name;
     var head = fileName.split(".");
 
+
     $.ajax({
   type: "POST",
   url: "save.php",
@@ -332,11 +334,9 @@ if($bbb=="ads"){
   }
 }).done(function(o) {
   console.log('saved'); 
-  // If you want the file to be visible in the browser 
-  // - please modify the callback in javascript. All you
-  // need is to return the url to the file, you just saved 
-  // and than put the image in your browser.
+
 });
+
 
     }
     
@@ -348,6 +348,7 @@ if($bbb=="ads"){
 		capture();
 
   });
+
 
     function deploy(){
    	fileList.forEach(function(file){
@@ -373,9 +374,7 @@ if($bbb=="ads"){
       }
       document.getElementById("aspx").appendChild(vid);
       var video = document.getElementById('video'+fid);
-      /* console.log(video.videoWidth + " " + video.videoHeight);
-      canv.width = 1180;
-      canv.height = 520; */
+  
       canv.setAttribute("style", "border:1px solid #000000;display:none;height:640;width:1280;margin-left:50px; margin-top:-400px;");
       canv.setAttribute("id", "canvas");
       document.body.appendChild(canv);
@@ -396,7 +395,7 @@ if($bbb=="ads"){
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        <script src="scripts/dm.js"></script>
+        
 
 
 </body>
