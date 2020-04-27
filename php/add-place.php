@@ -1,4 +1,12 @@
+<?php
+    session_start();
 
+    if(isset($_SESSION["flist"])){
+        $gr = $_SESSION["flist"];    
+    }
+
+    ?>
+   
 
 <!DOCTYPE HTML>
 <html>
@@ -18,15 +26,7 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link href="../styles/dm.css" rel="stylesheet">
     <link href="../styles/dm3.css" rel="stylesheet">
-    <?php
-    session_start();
-
-    if(isset($_SESSION["flist"])){
-        $gr = $_SESSION["flist"];    
-    }
-
-    ?>
-   
+    
 
     
 
