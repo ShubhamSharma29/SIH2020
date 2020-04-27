@@ -322,7 +322,7 @@ var allFiles = "<?php echo $gr; ?>";
 var Imglist = allFiles.split("$").filter(function(el) {return el.length != 0});
 var firstScene1 = Imglist[0].split("/");
 var GetName = "<?php echo $_SESSION['message']; ?>";
-var fs1 = firstScene1[firstScene1.length -1].split(".jpg")[0];
+var fs1 = firstScene1[firstScene1.length -1].split(".png")[0];
 
 var kt = {
 
