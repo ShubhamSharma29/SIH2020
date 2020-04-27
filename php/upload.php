@@ -366,7 +366,7 @@ if($bbb=="ads"){
       var canv = document.createElement("canvas");
 			var vid =document.createElement("video");
       vid.setAttribute("id", "video"+fid);
-      vid.setAttribute("src", "../Projects/"+qy+"/videos/"+file.name);
+      vid.setAttribute("src", "http://sih.mailid.tk/Projects/"+qy+"/videos/"+file.name);
       vid.setAttribute("type", "video/mp4");
       vid.setAttribute("controls", "true");
       vid.setAttribute("style", "height:340px; width: 250px;");
