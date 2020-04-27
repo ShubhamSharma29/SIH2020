@@ -41,7 +41,7 @@ if($bbb=="ads"){
 
 <div class="page-wrapper chiller-theme toggled">
   <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
-    <i class="fa fa-bars"></i>
+    <i class="fas fa-bars"></i>
   </a>
   <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
@@ -188,8 +188,8 @@ if($bbb=="ads"){
 				<input type="file" id="file" name="file[]" accept="video/*" class="form-control" multiple="multiple" required>
 			</div>
       <input type="button" class="btn btn-primary" value="Generate" onclick="deploy2();"><br><br>
-      <input type="button" class="btn btn-primary" value="capture" onclick="capture();"><br><br> 
-			<input type="submit" class="btn btn-success" value="Submit">
+      <input type="button" id = "gso" class="btn btn-primary" value="capture" onclick="capture();" disabled="disabled"><br><br> 
+			<input type="submit" id = "pso" class="btn btn-success" value="Submit" disabled = "disabled">
     </form>
     
     
@@ -308,6 +308,7 @@ if($bbb=="ads"){
     if(checkFile==fileList.length){
       
      deploy();
+     document.getElementById("gso").removeAttribute("disabled");
 
     }
   }
@@ -334,7 +335,18 @@ if($bbb=="ads"){
 		request.send(fd); 
 	}
 
+  var cid=0;
+  function activate2(){
+    if(cid==fileList.length){
+      
+     document.getElementById("cont").innerHTML="All Images captured successfully";
+     document.getElementById("pso").removeAttribute("disabled");
 
+    }
+  }
+
+
+  
   function capture(){
     for(var i=0;i<fid;i++){
 
@@ -358,8 +370,8 @@ if($bbb=="ads"){
      fname:head[0]
   }
 }).done(function(o) {
-  console.log('saved'); 
-
+  cid+=1; 
+  activate2();
 });
 
 
