@@ -9,6 +9,7 @@ if($bbb=="ads"){
   $_SESSION["ads"]="ads";
 }
 
+
 ?>
 
 <html>
@@ -26,6 +27,14 @@ if($bbb=="ads"){
     <link href="../styles/dm.css" rel="stylesheet">
     <link href="../styles/dm3.css" rel="stylesheet">
     <script src="../scripts/dm.js"></script>
+    <style>
+    #cont{
+      color:green;
+      margin-top:200px;
+    }
+
+
+    </style>
 
 </head>
 <body>
@@ -179,7 +188,7 @@ if($bbb=="ads"){
 				<input type="file" id="file" name="file[]" accept="video/*" class="form-control" multiple="multiple" required>
 			</div>
       <input type="button" class="btn btn-primary" value="Generate" onclick="deploy2();"><br><br>
-      <input type="button" class="btn btn-primary" value="clip" onclick="deploy();"><br><br>
+      <!-- <input type="button" class="btn btn-primary" value="clip" onclick="deploy();"><br><br> -->
 			<input type="submit" class="btn btn-success" value="Submit">
     </form>
     
@@ -188,6 +197,7 @@ if($bbb=="ads"){
 </div>
 <div id ="aspx">
 </div>
+<div id = "cont"></div>
 
   </main>
   
@@ -293,6 +303,17 @@ if($bbb=="ads"){
 		}
 	});
 
+
+  function activate(){
+    if(checkFile==fileList.length){
+      
+     deploy();
+
+    }
+  }
+
+
+  var checkFile = 0;
 	sendFile = function(file){
     
 		var fd = new FormData();
@@ -304,6 +325,9 @@ if($bbb=="ads"){
     request.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     //nothing
+    checkFile+=1;
+    document.getElementById("cont").innerHTML += this.responseText + "<br>";
+    activate();
     }
   };
 		
@@ -366,7 +390,7 @@ if($bbb=="ads"){
       var canv = document.createElement("canvas");
 			var vid =document.createElement("video");
       vid.setAttribute("id", "video"+fid);
-      vid.setAttribute("src", "https://sih.mailid.tk/Projects/"+qy+"/videos/"+file.name);
+      vid.setAttribute("src", "../Projects/"+qy+"/videos/"+file.name);
       vid.setAttribute("type", "video/mp4");
       vid.setAttribute("controls", "true");
       vid.setAttribute("style", "height:340px; width: 250px;");
