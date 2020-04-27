@@ -188,7 +188,7 @@ if($bbb=="ads"){
 				<input type="file" id="file" name="file[]" accept="video/*" class="form-control" multiple="multiple" required>
 			</div>
       <input type="button" class="btn btn-primary" value="Generate" onclick="deploy2();"><br><br>
-      <!-- <input type="button" class="btn btn-primary" value="clip" onclick="deploy();"><br><br> -->
+      <input type="button" class="btn btn-primary" value="capture" onclick="capture();"><br><br> 
 			<input type="submit" class="btn btn-success" value="Submit">
     </form>
     
@@ -368,13 +368,14 @@ if($bbb=="ads"){
 }
   var fid=0;
 	var fc = document.getElementById("capt");
-	fc.addEventListener('submit', function(event){
+	/*
+  fc.addEventListener('submit', function(event){
     //event.preventDefault();
 		capture();
     
   });
 
-
+*/
     function deploy(){
    	fileList.forEach(function(file){
 
