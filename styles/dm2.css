@@ -185,7 +185,7 @@ xpopup
 
 .cd-popup-container {
   position: relative;
-  width: 90%;
+  width: 100%;
   max-width: 400px;
   margin: 4em auto;
   background: #FFF;
