@@ -178,7 +178,8 @@ if($bbb=="ads"){
 				<label>Select video</label>
 				<input type="file" id="file" name="file[]" accept="video/*" class="form-control" multiple="multiple" required>
 			</div>
-      <input type="button" class="btn btn-primary" value="Generate" onclick="deploy();"><br><br>
+      <input type="button" class="btn btn-primary" value="Generate" onclick="deploy2();"><br><br>
+      <input type="button" class="btn btn-primary" value="clip" onclick="deploy();"><br><br>
 			<input type="submit" class="btn btn-success" value="Submit">
     </form>
     
@@ -353,11 +354,11 @@ if($bbb=="ads"){
     function deploy(){
    	fileList.forEach(function(file){
 
-			sendFile(file);
+			//sendFile(file);
 			//upldFile(file);
 
             
-      var dc = document.getElementById("canvas");
+       var dc = document.getElementById("canvas");
       if(dc!=null){
         dc.remove();
       }
@@ -386,13 +387,20 @@ if($bbb=="ads"){
       document.body.appendChild(canv);
       fid+=1;
       
-
+      
 		});
-		
+		 
+
+    }
+
+
+    function deploy2(){
+
+      fileList.forEach(function(file){
+
+      sendFile(file);
+      });
     
-
-
-
     }
 	
 
