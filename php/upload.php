@@ -104,6 +104,9 @@ if($bbb=="ads"){
             <div class="sidebar-submenu">
               <ul>
                 <li>
+                  <a href="../html/add_project.html">Add Project</a>
+                </li>
+                <li>
                   <a href="Homepage.html">Add Scene</a>
                 </li>
                 <li>
@@ -111,6 +114,22 @@ if($bbb=="ads"){
                 </li>
                 <li>
                   <a href="../html/scene-backup.html">Backup</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+            <i class="far fa-user"></i>
+              <span>Profile</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Update profile</a>
+                </li>
+                <li>
+                  <a href="#">Change password</a>
                 </li>
               </ul>
             </div>
@@ -128,9 +147,6 @@ if($bbb=="ads"){
                   <li>
                     <a href="modify-admins.php">Modify/Delete admins</a>
                   </li>
-                  <li>
-                  <a href="chaange-pass.php">Change password</a>
-                </li>
               </ul>
             </div>
           </li>
