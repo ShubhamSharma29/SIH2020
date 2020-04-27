@@ -144,7 +144,7 @@ body {
                   <a href="#">Update profile</a>
                 </li>
                 <li>
-                  <a href="#">Change password</a>
+                  <a href="change-pass.php">Change password</a>
                 </li>
               </ul>
             </div>

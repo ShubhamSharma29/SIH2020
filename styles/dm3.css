@@ -1,71 +1,58 @@
-
-
-
-
 .fl-fl {
-    background: #d6a137;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    padding: 4px;
-    width: 15%;
-    position: fixed;
-    right: -12%;
-    z-index: 0;
-    font: normal normal 10px Arial;
-    -webkit-border-radius: 30px 0px 0px 30px;
-    -moz-border-radius: 30px 0px 0px 30px;
-    border-radius: 30px 0px 0px 30px;
-    /* -webkit-transition: all .25s ease;
-    -moz-transition: all .25s ease;
-    -ms-transition: all .25s ease;
-    -o-transition: all .25s ease; */
-    transition: all 1s ease;
-  }
-  
-  .fas {
-    font-size: 20px;
-    color: #fff;
-    padding: 10px 0;
-    width: 30px;
-    margin-left: 8px;
-  }
-  
-  .fl-fl:hover {
-    right: 0;
-  }
-  
-  .fl-fl a {
-    color: #fff !important;
-    text-decoration: none;
-    text-align: center;
-    line-height: 43px!important;
-    vertical-align: top!important;
-  }
-  
-  .float-fb {
-    top: 160px;
-  }
-  
-  .float-tw {
-    top: 215px;
-  }
-  
-  .float-gp {
-    top: 270px;
-  }
-  /*
-  .float-rs {
-    top: 325px;
-  }
-  
-  .float-ig {
-    top: 380px;
-  } */
-  
-  .float-pn {
-    top: 325px;
-  }
-  
+  background: #d6a137;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 4px;
+  width: 15%;
+  position: fixed;
+  right: -12%;
+  z-index: 0;
+  font: normal normal 10px Arial;
+  -webkit-border-radius: 30px 0px 0px 30px;
+  -moz-border-radius: 30px 0px 0px 30px;
+  border-radius: 30px 0px 0px 30px;
+  /* -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease; */
+  transition: all 1s ease;
+}
+
+.fas {
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 0;
+  width: 30px;
+  margin-left: 8px;
+}
+
+.fl-fl:hover {
+  right: 0;
+}
+
+.fl-fl a {
+  color: #fff !important;
+  text-decoration: none;
+  text-align: center;
+  line-height: 43px!important;
+  vertical-align: top!important;
+}
+
+.float-fb {
+  top: 160px;
+}
+
+.float-tw {
+  top: 215px;
+}
+
+.float-gp {
+  top: 270px;
+}
+
+.float-pn {
+  top: 325px;
+}
 
 
 
@@ -85,125 +72,12 @@
 
 
 
+/* --------------------------------------------------- */
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-   /* ---------------------------------------*/
-
-   /* a {
-    color: #fff;
-    text-decoration: none;
-    text-align:left;
-  }
-   .social {
-       float : right;
-      
-    top: 50px;
-  }
-  .social ul {
-    position: right;
-    right:-200%;
-    padding: 0px;
-    z-index: 1000;
-    -webkit-transform: translate(270px,0);
-    -moz-transform: translate(270px,0);
-    -ms-transform: translate(270px, 0);
-    -o-transform: translate(270px, 0);
-    transform: translate(100px,0);
-  }
-
-  .social ul li i {
-    margin-left: 5px;
-    color: #000;
-    background: #fff;
-    padding: 1.5px;
-    -webkit-border-radius: 50%; 
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    font-size: 27px;
-    background: #ffffff;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  .social ul li {
-    display: block;
-    margin: 5px;
-    background: #4f8b89;
-    width: 200px;
-    text-align: left;
-    margin-left:100px;
-    padding: 10px;
-    -webkit-border-radius: 30px 0px 0px 30px;
-    -moz-border-radius: 30px 0px 0px 30px;
-    border-radius: 30px 0px 0px 30px;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -ms-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s;
-  }
-  .social ul li:hover {
-    -webkit-transform: translate(-110px,0);
-    -moz-transform: translate(-110px,0);
-    -ms-transform: translate(-110px, 0);
-    -o-transform: translate(-110px, 0);
-    transform: translate(-110px, 0);
-    background: rgba(255, 255, 255, 0.4);
-  }
-  .social ul li:hover a {
-    color: #000;
-  }
-  .social ul li:hover i {
-    color: #fff;
-    background: rgba(0, 0, 0, 0);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -ms-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s;
-  } */
-  
-/*   
-  body {
-    background: #4F8B89;
-    color: #fff;
-    font-family: 'Raleway', sans-serif;
-  } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* popup */
 
 
 
