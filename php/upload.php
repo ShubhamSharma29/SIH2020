@@ -298,6 +298,7 @@ if($bbb=="ads"){
 
 
 <script>
+var adsListener ="<?php echo $bbb ; ?>";
 	var fileInput = document.getElementById('file');
 	var fileList=[];
 

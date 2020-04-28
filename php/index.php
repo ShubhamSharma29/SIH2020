@@ -120,7 +120,7 @@ body {
                             <a href="./index.php">Add Place</a>
                           </li>
                           <li>
-                            <a href="#">Modify Scene</a>
+                            <a href="update.php">Modify Scene</a>
                           </li>
                           <li>
                             <a href="../html/scene-backup.html">Backup</a>
@@ -139,7 +139,7 @@ body {
                             <a href="./Homepage.html">Update profile</a>
                           </li>
                           <li>
-                            <a href="./update.php">Change password</a>
+                            <a href="#">Change password</a>
                           </li>
                         </ul>
                       </div>
