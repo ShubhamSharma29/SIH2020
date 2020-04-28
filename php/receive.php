@@ -32,5 +32,6 @@ foreach ($jbat as $id => $item) {
    $ec->insertOne($item);
 }
  
+echo "Place created Succesfully";
 
 ?>

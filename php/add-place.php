@@ -447,7 +447,7 @@ function transplace() {
     
     for(var i=0;i<Imglist.length;i++){
         var carr = Imglist[i].split("/");
-        var ins = carr[carr.length -1].split(".jpg")[0];
+        var ins = carr[carr.length -1].split(".png")[0];
         var s = ins;
             //rt.push(s);
             var t = document.createElement("option");
