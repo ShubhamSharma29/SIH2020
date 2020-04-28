@@ -414,7 +414,7 @@ else{
         console.log(Imglist);  
         for(var i=0;i<Imglist.length;i++){
             var carr = Imglist[i].split("/");
-            var ins = carr[carr.length -1].split(".jpg")[0];
+            var ins = carr[carr.length -1].split(".png")[0];
             
             rt.push(ins);
         ki.addScene(ins, {"title":Imglist[i],

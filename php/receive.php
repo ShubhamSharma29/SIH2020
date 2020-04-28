@@ -34,4 +34,5 @@ foreach ($jbat as $id => $item) {
  
 echo "Place created Succesfully";
 
+header("Location:super-dm.php");
 ?>
