@@ -32,6 +32,12 @@ if($bbb=="ads"){
       color:green;
       margin-top:200px;
     }
+    #mk1{
+      float:right;
+    }
+    #mk2{
+      float:right;
+    }
 
 
     </style>
@@ -181,14 +187,14 @@ if($bbb=="ads"){
   <main class="page-content">
    
 <div class="container" style="margin-top: 200px;" >
-	<div class="offset-md-4 col-md-4" style="position:fixed;left:20px;">
+	<div class="offset-md-4 col-md-4" style="position:fixed;left:20px;" id = "two">
 		<form method="POST" enctype="multipart/form-data" action="redirect.php" id = "capt">
 			<div class="form-group">
 				<label>Select video</label>
 				<input type="file" id="file" name="file[]" accept="video/*" class="form-control" multiple="multiple" required>
 			</div>
-      <input type="button" class="btn btn-primary" value="Generate" onclick="deploy2();"><br><br>
-      <input type="button" id = "gso" class="btn btn-primary" value="capture" onclick="capture();" disabled="disabled"><br><br> 
+      <input type="button" class="btn btn-primary" value="Generate" onclick="deploy2();"><div id ="mk1"></div><br><br>
+      <input type="button" id = "gso" class="btn btn-warning" value="capture" onclick="capture();" disabled="disabled"><div id ="mk2"></div><br><br> 
 			<input type="submit" id = "pso" class="btn btn-success" value="Submit" disabled = "disabled">
     </form>
     
@@ -308,6 +314,9 @@ if($bbb=="ads"){
     if(checkFile==fileList.length){
       
      deploy();
+     document.getElementById("spin1").remove();
+     
+
      document.getElementById("gso").removeAttribute("disabled");
 
     }
@@ -340,6 +349,7 @@ if($bbb=="ads"){
     if(cid==fileList.length){
       
      document.getElementById("cont").innerHTML="All Images captured successfully";
+     document.getElementById("spin2").remove();
      document.getElementById("pso").removeAttribute("disabled");
 
     }
@@ -348,6 +358,16 @@ if($bbb=="ads"){
 
   
   function capture(){
+    var dc = document.createElement("div");
+      dc.setAttribute("class","spinner-border text-warning");
+      dc.setAttribute("id", "spin2");
+      dc.setAttribute("role","status");
+      var ef = document.createElement("span");
+      ef.setAttribute("class","sr-only");
+      ef.innerHTML = "Loading...";
+      dc.appendChild(ef);
+      document.getElementById("mk2").appendChild(dc);
+
     for(var i=0;i<fid;i++){
 
     var canvas = document.getElementById('canvas');
@@ -389,6 +409,8 @@ if($bbb=="ads"){
 
 */
     function deploy(){
+
+
    	fileList.forEach(function(file){
 
 			//sendFile(file);
@@ -432,7 +454,15 @@ if($bbb=="ads"){
 
 
     function deploy2(){
-
+      var dc = document.createElement("div");
+      dc.setAttribute("class","spinner-border text-primary");
+      dc.setAttribute("id", "spin1");
+      dc.setAttribute("role","status");
+      var ef = document.createElement("span");
+      ef.setAttribute("class","sr-only");
+      ef.innerHTML = "Loading...";
+      dc.appendChild(ef);
+      document.getElementById("mk1").appendChild(dc);
       fileList.forEach(function(file){
 
       sendFile(file);
