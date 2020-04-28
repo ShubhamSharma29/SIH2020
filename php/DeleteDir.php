@@ -1,120 +1,28 @@
-
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
-    <title>Super Admin</title>
-    
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<html>
+    <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-        <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'> 
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="../styles/dm4.css" rel="stylesheet">
-    <link href="../styles/dm.css" rel="stylesheet">
-    <script src="../scripts/dm.js"></script>
+    <link href="styles/dm.css" rel="stylesheet">
     <link href="../styles/dm3.css" rel="stylesheet">
-    <script>
-  function preventBack(){window.history.forward();}
-  setTimeout("preventBack()", 1);
-  window.onunload=function(){null};
-</script>
+        
+      <style>
+      #resp{
+          width:500px;
+          height:400px;
+      }
+      </style>
+     
 
-</head>
+    </head>
 
-<style>
-  h1 { font-family: "Copperplate Gothic Light"; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; }
-/* body {
-  background-image: url("https://s27389.pcdn.co/wp-content/uploads/2018/04/AdobeStock_136701855-1024x683.jpeg");
-  background-repeat: no-repeat;
-  background-color: #cccccc;
-  background-size: cover;
-  background-position: center;
-} */
-
-
-@import url(//fonts.googleapis.com/css?family=Oswald:400);
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.chart {
-  position: absolute;
-  width:400px;
-  height: 400px;
-  top: 52%;
-  left: 80%;
-  margin: -225px 0 0 -225px;
-}
-.pieTip {
-  position: absolute;
-  float: left;
-  min-width: 30px;
-  max-width: 300px;
-  padding: 5px 18px 6px;
-  border-radius: 2px;
-  background: rgba(255,255,255,.97);
-  color: #444;
-  font-size: 19px;
-  text-shadow: 0 1px 0 #fff;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1.3;
-  letter-spacing: .06em;
-  box-shadow: 0 0 3px rgba(0,0,0,0.2), 0 1px 2px rgba(0,0,0,0.5);
-  -webkit-transform: all .3s;
-     -moz-transform: all .3s;
-      -ms-transform: all .3s;
-       -o-transform: all .3s;
-          transform: all .3s;
-  pointer-events: none;
-}
-.pieTip:after {
-      position: absolute;
-      left: 50%;
-      bottom: -6px;
-      content: "";
-      height: 0;
-      margin: 0 0 0 -6px;
-      border-right: 5px solid transparent;
-      border-left: 5px solid transparent;
-      border-top: 6px solid rgba(255,255,255,.95);
-      line-height: 0;
-}
-.chart path { cursor: pointer; }
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 100%;
-  height:70%;
-  margin-top:-5px;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.container {
-  padding: 2px 16px;
-}
-
-
-</style>
-<body  style="background-color:#cfd1d3" class="page-wrapper chiller-theme toggled">
-<div class="page-wrapper chiller-theme toggled">
+    <body>
+        <div class="page-wrapper chiller-theme toggled">
   <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
-    <i class="fa fa-bars"></i>
+    <i class="fas fa-bars"></i>
   </a>
   <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
@@ -130,7 +38,7 @@
         </div>
         <div class="user-info"><a href="../php/super-dm.php">
           <span class="user-name">6 Bits
-          </span><br>
+          </span>
           <span class="user-role">A VR Experience</span></a>
         </div>
       </div>
@@ -167,9 +75,6 @@
                   <a href="update.php">Modify Scene</a>
                 </li>
                 <li>
-                <a href ="DeleteDir.php">Delete Place</a>
-                </li>
-                <li>
                   <a href="../html/scene-backup.html">Backup</a>
                 </li>
               </ul>
@@ -189,12 +94,12 @@
                     <a href="modify-admins.php">Modify/Delete admins</a>
                   </li>
                   <li>
-                  <a href="change-pass.php">Change password</a>
+                  <a href="#">Change password</a>
                 </li>
               </ul>
             </div>
           </li>
-          <li class="sidebar-btn">
+          <li class="sidebar-dropdown">
             <a href="blank.php">
               <i class="fa fa-globe"></i>
               <span>Log out</span>
@@ -213,33 +118,19 @@
     </div>
   </nav>
   <!-- sidebar-wrapper  -->
-  <main style="background-color:#6C6AE4" class="page-content">
-      <div class="container-fluid">
-        <h1>6  Bits</h1>
-        <pre><h6>A VR Experience</h6></pre>       
-            <div class="row">
-            </div>
-      </div>          
-    </main>
-
-      <div class="card">
-        <div class="container">
-          <div id="chartContainer" style="height: 400px; width:400px; justify-content:center; margin:0 auto; position:relative ; 
-              margin-left:200px ">
-            </div>
-
-
-            <div id="pieChart" class="chart" >
-              <span style="font-size:15px ; background-color:cornsilk"><strong>Analytics of selected places
-                <br> in Andaman & Nicobar</strong></span>
-            </div>   
+  <main class="page-content">
+  <div id = "newdiv">
+        <form id = "createProject" action="del2.php" method="POST">
+            Search Name:&ensp;<input type ="text" name = "Pname" id = "Pname"><br><br>
+            <input type ="submit" value= "submit"></button>
+        </form>    
         </div>
-      </div>
-   
-      
-          
- 
-      <div class="float-sm">
+
+        <div id = "resp">
+        </div>
+  </main>
+  
+  <div class="float-sm">
             <div class="fl-fl float-fb">
               <i class="fas fa-user"></i>
               <a href="">View Profile</a>
@@ -324,9 +215,8 @@
 
             </script>
           
-     
-  </div>    
-    
+</div>
 </body>
+
 
 </html>
