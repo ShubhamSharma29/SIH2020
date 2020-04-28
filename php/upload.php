@@ -400,6 +400,15 @@ if($bbb=="ads"){
 }
   var fid=0;
 	var fc = document.getElementById("capt");
+
+  fc.addEventListener('submit', function(event){
+    if(adsListener=="ads"){
+      event.preventDefault();
+      window.location.replace("hyb.php");
+    }
+       
+  });
+
 	/*
   fc.addEventListener('submit', function(event){
     //event.preventDefault();

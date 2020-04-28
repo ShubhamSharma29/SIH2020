@@ -164,7 +164,7 @@
                   <a href="index.php">Add Place</a>
                 </li>
                 <li>
-                  <a href="#">Modify Scene</a>
+                  <a href="update.php">Modify Scene</a>
                 </li>
                 <li>
                   <a href="../html/scene-backup.html">Backup</a>

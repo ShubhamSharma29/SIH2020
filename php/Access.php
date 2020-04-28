@@ -1,3 +1,19 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION["scenedata"])){
+    $gr = $_SESSION["scenedata"];    
+}
+
+    $gr2 = $_SESSION["message"];    
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,18 +26,7 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link href="styles/dm.css" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
-    <?php
-
-session_start();
-
-if(isset($_SESSION["scenedata"])){
-    $gr = $_SESSION["scenedata"];    
-}
-
-    $gr2 = $_SESSION["message"];    
-
-
-?>
+   
         
 
 <style>
@@ -489,7 +494,7 @@ if(isset($_SESSION["scenedata"])){
       ki.removeScene(rt[prex]);     
       
       var xhr = new XMLHttpRequest();
-      xhr.open("GET","RemoveScene.php?q="+dg);
+      xhr.open("GET","RemoveScene.php?q="+rt[prex]);
       xhr.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     document.getElementById("msg").innerHTML =
@@ -497,6 +502,8 @@ if(isset($_SESSION["scenedata"])){
     }
   };
       xhr.send();
+      delete rt[prex];
+      subconf();
       }
       else{
         //do nothing

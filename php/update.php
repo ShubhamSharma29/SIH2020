@@ -1,3 +1,11 @@
+<?php 
+
+        session_start(); 
+        if(isset($_SESSION["Proj"])){
+            $gr = $_SESSION["Proj"];    
+        }
+        ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,11 +16,7 @@
   <link href="../styles/dm4.css" rel="stylesheet">
     <link href="styles/dm.css" rel="stylesheet">
     <link href="../styles/dm3.css" rel="stylesheet">
-        <?php session_start(); 
-        if(isset($_SESSION["Proj"])){
-            $gr = $_SESSION["Proj"];    
-        }
-        ?>
+        
       <style>
       #resp{
           width:500px;
