@@ -16,7 +16,11 @@
   <link href="../styles/dm4.css" rel="stylesheet">
     <link href="../styles/dm.css" rel="stylesheet">
     <script src="../scripts/dm.js"></script>
- 
+    <script>
+  function preventBack(){window.history.forward();}
+  setTimeout("preventBack()", 1);
+  window.onunload=function(){null};
+</script>
 
 </head>
     <style>
@@ -47,6 +51,11 @@ body {
   /* background-blend-mode: overlay; */
 }
 </style>
+<script>
+function preventBack(){window.history.forward();}
+  setTimeout("preventBack()", 1);
+  window.onunload=function(){null};
+</script>
 
     <body>
         <div class="page-wrapper chiller-theme toggled">

@@ -58,6 +58,7 @@ else{
     <link href="styles/dm.css" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     
+
         
 
 <style>
@@ -598,7 +599,7 @@ else{
 };
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(jsonStr);
-    
+    window.location.replace("super-dm.php");
     }
 
     var cntr=0;

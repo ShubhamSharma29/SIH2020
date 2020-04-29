@@ -23,11 +23,7 @@
     <link href="../styles/dm.css" rel="stylesheet">
     <script src="../scripts/dm.js"></script>
     <link href="../styles/dm3.css" rel="stylesheet">
-    <script>
-  function preventBack(){window.history.forward();}
-  setTimeout("preventBack()", 1);
-  window.onunload=function(){null};
-</script>
+    
 
 </head>
 

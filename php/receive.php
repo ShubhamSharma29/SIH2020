@@ -32,6 +32,10 @@ foreach ($jbat as $id => $item) {
    $ec->insertOne($item);
 }
  
+if(isset($_SESSION["flist"])){
+  unset($_SESSION["flist"]);    
+}
+
 echo "Place created Succesfully";
 
 

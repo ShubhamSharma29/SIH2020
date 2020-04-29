@@ -42,6 +42,13 @@ if($bbb=="ads"){
 
     </style>
 
+<script>
+  function preventBack(){window.history.forward();}
+  setTimeout("preventBack()", 1);
+  window.onunload=function(){null};
+</script>
+
+
 </head>
 <body>
 
@@ -193,7 +200,7 @@ if($bbb=="ads"){
 				<label>Select video</label>
 				<input type="file" id="file" name="file[]" accept="video/*" class="form-control" multiple="multiple" required>
 			</div>
-      <input type="button" class="btn btn-primary" value="Generate" onclick="deploy2();"><div id ="mk1"></div><br><br>
+      <input type="button" id="gen" class="btn btn-primary" value="Generate" disabled="disabled" onclick="deploy2();"><div id ="mk1"></div><br><br>
       <input type="button" id = "gso" class="btn btn-warning" value="capture" onclick="capture();" disabled="disabled"><div id ="mk2"></div><br><br> 
 			<input type="submit" id = "pso" class="btn btn-success" value="Submit" disabled = "disabled">
     </form>
@@ -308,6 +315,13 @@ var adsListener ="<?php echo $bbb ; ?>";
 		for(var i=0;i<fileInput.files.length;i++){
 			fileList.push(fileInput.files[i]);
 		}
+    if(fileList.length>0){
+      document.getElementById("gen").removeAttribute("disabled");
+    }
+    else{
+      document.getElementById("gen").setAttribute("disabled", "disabled");
+    }
+
 	});
 
 

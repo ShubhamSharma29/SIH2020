@@ -26,7 +26,7 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link href="../styles/dm.css" rel="stylesheet">
     <link href="../styles/dm3.css" rel="stylesheet">
-    
+   
 
     
 
@@ -504,7 +504,7 @@ function subconf(){
     };
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(jsonStr);
-
+    window.location.replace("super-dm.php");
 }
 
 var cntr=0;
@@ -540,18 +540,7 @@ var cntr=0;
 
 
 
-<?php
 
-
-
-if(isset($_SESSION["flist"])){
-    unset($_SESSION["flist"]);    
-}
-
-
-
-
-?>
 
 
 

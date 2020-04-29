@@ -649,18 +649,6 @@ if(isset($_SESSION["scenedata"])){
         <script src="scripts/dm.js"></script>
 
 
-        
-        
-<?php
-
-if(isset($_SESSION["scenedata"])){
-    unset($_SESSION["scenedata"]);    
-}
-
-
-
-?>
-
 
 
 
