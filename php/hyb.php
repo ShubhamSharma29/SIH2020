@@ -357,7 +357,8 @@ else{
 
 <input type ="button"  value = "Previous" id = "prev" onclick ="previous()" >
 <input type ="button"  value = "Next" id = "next" onclick ="next()" ><br><br>
-<input type = "button" value = "Save Changes" name ="cnf" id ="cnf" class = "btn3 green" onclick ="subconf()">
+<input type = "button" value = "Save Changes" name ="cnf" id ="cnf" class = "btn3 green" onclick ="subconf()"><br>
+<input type = "button" value = "Refresh Scene" id = "refresh" onclick ="ref();">
 <span id="msg"></msg>
   </main>
   <!-- page-content" -->
@@ -438,6 +439,11 @@ else{
         mg["scene"] =   xg.scene;
         mg["default"]= xg.default;
          */
+
+
+        function ref(){
+          ki.loadScene(ki.getScene());
+        } 
 
         var mut=0;
         var rm=0;
