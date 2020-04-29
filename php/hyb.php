@@ -636,18 +636,6 @@ else{
 
         
         
-<?php
-
-if(isset($_SESSION["scenedata"])){
-    unset($_SESSION["scenedata"]);    
-}
-
-if(isset($_SESSION["flist"])){
-    unset($_SESSION["flist"]);    
-}
-
-
-?>
 
 
 
