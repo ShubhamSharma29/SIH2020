@@ -9,7 +9,8 @@ $user =$client->users;
 
 $ec = $user->admins;
 
-if(isset($_POST["update"])){
+if(isset($_POST["submit"]))
+{
   $username=$_POST["username"];
   $crpassword=$_POST["password"];
   $newpassword=$_POST["newpassword"];
@@ -178,7 +179,7 @@ body {
             </div>
               <div class="row">
                   <div class="col-sm-6">
-                      <button type="submit" id="submit" name="insert" class="btn btn-primary button">Submit</button>
+                      <button type="submit" id="submit" name="submit" class="btn btn-primary button">Submit</button>
                   </div>
                   <div class="col-sm-6">
                       <button type="reset" class="btn btn-primary button">Reset</button>
