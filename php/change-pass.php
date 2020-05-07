@@ -8,13 +8,20 @@ $client = new MongoDB\Client('mongodb+srv://smartindia:smartindia@cluster0-zlffx
 $user =$client->users; 
 
 $ec = $user->admins;
-
-if(isset($_POST["submit"]))
+$dr = $ec->find([]);
+foreach($dr as $res)
+{
+  $oldpass=$res['password'];
+}
+if(array_key_exists('submit',$_POST))
 {
   $username=$_POST["username"];
   $crpassword=$_POST["password"];
   $newpassword=$_POST["newpassword"];
-  $ec->updateOne(['username' => $username],[ 'set' => ["password" => $newpassword ]]);
+  if($oldpass == $crpassword)
+  {
+    $ec->updateOne(['username' => $username],[ 'set' => ["password" => $newpassword ]]);
+  }
 }
 ?>
 
@@ -72,7 +79,7 @@ body {
         </div>
         <div class="user-info"><a href="super-dm.php">
           <span class="user-name">6 Bits
-          </span>
+          </span><br>
           <span class="user-role">A VR Experience</span></a>
         </div>
       </div>
@@ -102,14 +109,17 @@ body {
             </a>
             <div class="sidebar-submenu">
               <ul>
-                <li>
+              <li>
                   <a href="index.php">Add Place</a>
                 </li>
                 <li>
-                  <a href="#">Modify Scene</a>
+                  <a href="update.php">Modify Scene</a>
                 </li>
                 <li>
-                  <a href="../html/scene-backup.html">Backup</a>
+                <a href ="DeleteDir.php">Delete Place</a>
+                </li>
+                <li>
+                <a  style="color:white light ; margin-left:115px ; margin-top:15px" class="modal-trigger"  data-modal="modal-name3" href="">Back-up</a>
                 </li>
               </ul>
             </div>
@@ -271,7 +281,30 @@ body {
               </div>
             </div>
           </div>
+          
+          <div class="modal" id="modal-name3">
+            <div class="modal-sandbox"></div>
+            <div class="modal-box">
+              <div class="modal-header">
+                <div class="close-modal">&#10006;</div> 
+                <h3>Scenes' Backup</h3>
+              </div>
+              <div class="modal-body">
+                <label for="import"><strong>Import a previous version:</strong></label><br>
+                <input style="background-color:#0d9691" class="btn btn-cyan" type="file" id="import" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" >
+              <br>
 
+                <div class="text-right">
+                  <label for="export"><strong>Export the current scene:</strong></label><br>
+                  <button type="button"  style="background-color:#0d9691 ; margin-right:90px" class="btn btn-primary"  id="export" >Export csv</button>
+                </div>
+                <br>
+                
+                <button class="close-modal">Close!</button><br><br>
+                <p style="color:crimson"><strong>NOTE:</strong> Only files of .csv type are expected to be chosen and exported</p>
+              </div>
+            </div>
+          </div>
 
             <script>
 

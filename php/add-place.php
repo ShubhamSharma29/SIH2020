@@ -11,91 +11,99 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
-    <title>Add Place</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <title>Super Admin</title>
+    
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+        <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'> 
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="../styles/dm4.css" rel="stylesheet">
     <link href="../styles/dm.css" rel="stylesheet">
+    <script src="../scripts/dm.js"></script>
     <link href="../styles/dm3.css" rel="stylesheet">
+    
+
+</head>
    
 
     
 
     <style>
 
-.btn {
-     border: none;
-     outline: none;
-     padding: 10px 16px;
-     margin-left:100px;
-     background-color: #f1f1f1;
-     cursor: pointer;
-   }
-
-   .btn2 {
-     border: none;
-     outline: none;
-     padding: 10px 16px;
-     
-     background-color: #f1f1f1;
-     cursor: pointer;
-     
-   }
-   
-   .active, .btn:hover {
-     background-color:#10b3ff;
-     color: white;
-   }
-
-   .active, .btn2:hover {
-     background-color:#f70733;
-     color: white;
-   }
-        .sel{
-            background-color: #10b3ff;
-        }
-        .sel2{
-            background-color: #f70733;
+      .btn {
+          border: none;
+          outline: none;
+          padding: 10px 16px;
+          margin-left:100px;
+          background-color: #f1f1f1;
+          cursor: pointer;
         }
 
+        .btn2 {
+          border: none;
+          outline: none;
+          padding: 10px 16px;
+          
+          background-color: #f1f1f1;
+          cursor: pointer;
+          
+        }
+        
+        .active, .btn:hover {
+          background-color:#10b3ff;
+          color: white;
+        }
 
-        .btn3 {
-  border-radius: 5px;
-  padding: 8px 10px;
-  font-size: 16px;
-  margin-bottom:15px;
-  text-align: center;
-  margin-left: 100px;
-  color: #fff;
-  position: relative;
-  display: inline-block;
-  -webkit-font-smoothing: antialiased;
-}
+        .active, .btn2:hover {
+          background-color:#f70733;
+          color: white;
+        }
+              .sel{
+                  background-color: #10b3ff;
+              }
+              .sel2{
+                  background-color: #f70733;
+              }
 
-.btn3:active {
-  transform: translate(0px, 5px);
-  -webkit-transform: translate(0px, 5px);
-  box-shadow: 0px 1px 0px 0px;
-}
 
-.green {
-  background-color: #2ecc71;
-  box-shadow: 0px 5px 0px 0px #15B358;
-}
+              .btn3 {
+        border-radius: 5px;
+        padding: 8px 10px;
+        font-size: 16px;
+        margin-bottom:15px;
+        text-align: center;
+        margin-left: 100px;
+        color: #fff;
+        position: relative;
+        display: inline-block;
+        -webkit-font-smoothing: antialiased;
+      }
 
-.green:hover {
-  background-color: #48E68B;
-}
-   
+      .btn3:active {
+        transform: translate(0px, 5px);
+        -webkit-transform: translate(0px, 5px);
+        box-shadow: 0px 1px 0px 0px;
+      }
+
+      .green {
+        background-color: #2ecc71;
+        box-shadow: 0px 5px 0px 0px #15B358;
+      }
+
+      .green:hover {
+        background-color: #48E68B;
+      }
+        
        #panorama {
            width: 750px;
            height: 400px;
@@ -117,7 +125,7 @@
          top:4px;
          border: 1px solid rgb(211, 23, 23); 
          position:absolute;
-   }
+        }
        #transmk {
          position:fixed;
          margin-top: 47px;
@@ -162,7 +170,7 @@
        }
 
     </style>
-</head>
+
 <body>
 
 <div class="page-wrapper chiller-theme toggled">
@@ -183,7 +191,7 @@
         </div>
         <div class="user-info"><a href="../php/super-dm.php">
           <span class="user-name">6 Bits
-          </span>
+          </span><br>
           <span class="user-role">A VR Experience</span></a>
         </div>
       </div>
@@ -208,38 +216,22 @@
           </li>
           <li class="sidebar-dropdown">
             <a href="#">
-              <i class="fa fa-chart-line"></i>
-              <span>Analytics</span>
-              <!-- <span class="badge badge-pill badge-danger">3</span> -->
-            </a>
-            <div class="sidebar-submenu">
-              <ul>
-                <li>
-                  <a href="../html/analytics-backup.html">Backup
-
-                  </a>
-                </li>
-                <li>
-                  <a href="../html/analytics-report.html">Report</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="sidebar-dropdown">
-            <a href="#">
               <i class="far fa-gem"></i>
               <span>Scenes/Projects</span>
             </a>
             <div class="sidebar-submenu">
               <ul>
-                <li>
-                  <a href="./index.php">Add Place</a>
+              <li>
+                  <a href="index.php">Add Place</a>
                 </li>
                 <li>
-                  <a href="./update.php">Modify Place</a>
+                  <a href="update.php">Modify Scene</a>
                 </li>
                 <li>
-                  <a href="../html/scene-backup.html">Backup</a>
+                <a href ="DeleteDir.php">Delete Place</a>
+                </li>
+                <li>
+                <a  style="color:white light ; margin-left:115px ; margin-top:15px" class="modal-trigger"  data-modal="modal-name3" href="">Back-up</a>
                 </li>
               </ul>
             </div>
@@ -258,7 +250,7 @@
                     <a href="modify-admins.php">Modify/Delete admins</a>
                   </li>
                   <li>
-                  <a href="#">Change password</a>
+                  <a href="change-pass.php">Change password</a>
                 </li>
               </ul>
             </div>
@@ -294,24 +286,24 @@
 
 
 
-  <input type  ="button" id="sub1" value = "sub" name = "transition" class = "btn" onclick="toggle()">
-<div id = "infobox">
-<input type  ="button" value = "Descriptive marker" name = "desc" id = "desc" onclick="descreate()" >
-<input type  ="button" value = "Transitional marker" name = "trans" id = "trans" onclick="transplace()" >
-</div>
+          <input type  ="button" id="sub1" value = "sub" name = "transition" class = "btn" onclick="toggle()">
+        <div id = "infobox">
+        <input type  ="button" value = "Descriptive marker" name = "desc" id = "desc" onclick="descreate()" >
+        <input type  ="button" value = "Transitional marker" name = "trans" id = "trans" onclick="transplace()" >
+        </div>
 
 
-<input type = "button" value = "Remove" id="rem"  class="btn2" onclick = "toggle2()"><br><br>
-<input type ="button"  value = "Previous" id = "prev" onclick ="previous()" >
-<input type ="button"  value = "Next" id = "next" onclick ="next()" ><br><br>
-<input type = "button" value = "Save Changes" name ="cnf" id ="cnf" class = "btn3 green" onclick ="subconf()">
-<span id="msg"></msg>
-  </main>
-  <!-- page-content" -->
-</div>
+        <input type = "button" value = "Remove" id="rem"  class="btn2" onclick = "toggle2()"><br><br>
+        <input type ="button"  value = "Previous" id = "prev" onclick ="previous()" >
+        <input type ="button"  value = "Next" id = "next" onclick ="next()" ><br><br>
+        <input type = "button" value = "Save Changes" name ="cnf" id ="cnf" class = "btn3 green" onclick ="subconf()">
+        <span id="msg"></msg>
+          </main>
+          <!-- page-content" -->
+        </div>
 
 
-
+      </main>
 
 <script>
 
@@ -530,19 +522,5 @@ var cntr=0;
 
 
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-        <script src="scripts/dm.js"></script>
-
-
-
-
-
-
-
-
 </body>
 </html>
