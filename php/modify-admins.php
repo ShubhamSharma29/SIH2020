@@ -191,7 +191,7 @@ body {
                     <br><br>
                     <h1 class="text-warning text-center" > All Admin Data </h1>
                     <br>
-                    <table  id="tabledata" style="margin-left:-10px" class=" table table-striped table-hover table-bordered">
+                    <table  id="tabledata" style="margin-left:-70px" class=" table table-striped table-hover table-bordered">
                     
                         <tr class="bg-dark text-white text-center">
                         
